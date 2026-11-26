@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Labour — Japan Statistical Atlas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="wordmark">Japan <span class="atlas">Statistical Atlas</span></p>
+    <p class="tagline">An independent atlas of Japan's official statistics</p>
+    <p class="meta">Figures compiled 26 November 2026 from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health, Labour and Welfare, the Ministry of Finance, the IMF, the World Bank, the OECD and the United Nations.</p>
+  </div>
+</header>
+<nav class="mainnav" aria-label="Main navigation">
+  <div class="wrap">
+    <button class="nav-toggle" type="button" aria-expanded="false">Menu ☰</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="population.html">Population</a></li>
+      <li><a href="economy.html">Economy</a></li>
+      <li><a href="labour.html" aria-current="page">Labour</a></li>
+      <li><a href="prices.html">Prices</a></li>
+      <li><a href="trade.html">Trade</a></li>
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="sources.html">Sources &amp; method</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <h1>Labour</h1>
+    <p class="lede">A tight labour market: unemployment has stayed below 3% for six years, total employment hit a record high in fiscal 2025, and there are 125 job openings for every 100 job seekers.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="value">2.5<small>%</small></div><div class="label">Unemployment rate</div><div class="change">Annual average 2024</div><p class="src">Statistics Bureau of Japan, Labour Force Survey, 2024</p></div>
+      <div class="kpi"><div class="value">68.29 <small>million</small></div><div class="label">Total employment</div><div class="change">Fiscal year 2025 — a record high</div><p class="src">MIC, Labour Force Survey, reported Apr 2026</p></div>
+      <div class="kpi"><div class="value">1.25</div><div class="label">Job openings per applicant</div><div class="change">125 openings for every 100 job seekers</div><p class="src">MHLW, General Employment Placement Situation, 2024</p></div>
+      <div class="kpi"><div class="value">76.1<small>%</small></div><div class="label">Female labour force participation</div><div class="change">Ages 15–64; female employment rate 74.2%</div><p class="src">OECD, 2024 (ILO modelled estimate 76.5%)</p></div>
+    </div>
+
+    <div class="chart-box">
+      <h3>Unemployment rate, annual average</h3>
+      <div id="chart-unemp"></div>
+      <p class="src">Source: Statistics Bureau of Japan, Labour Force Survey, long-term series. The World Bank indicator gives 2.45% for 2024.</p>
+    </div>
+
+    <h2>Where people work</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Employment by industry, 2023</caption>
+        <thead><tr><th>Industry</th><th class="num">Employed persons</th></tr></thead>
+        <tbody>
+          <tr><td>Agriculture, forestry and fishing</td><td class="num">1.99 million</td></tr>
+          <tr><td>Manufacturing</td><td class="num">10.55 million</td></tr>
+          <tr><td>Construction</td><td class="num">4.83 million</td></tr>
+          <tr><td>Wholesale and retail trade</td><td class="num">10.41 million</td></tr>
+          <tr><td>Other services</td><td class="num">26.18 million</td></tr>
+        </tbody>
+        <tfoot><tr><td>Labour force, 2023</td><td class="num">69.25 million</td></tr>
+        <tr><td>Employed persons, 2023</td><td class="num">67.47 million</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="src">Source: Asian Development Bank, Key Indicators for Asia and the Pacific 2024 (Statistics Bureau Labour Force Survey). Employment shares in 2024: agriculture, forestry and fishing 1.39%; goods-producing industries 18.84% (manufacturing 8.92%); services 79.76% (Taiwan MOL International Labour Statistics, citing Japan's Labour Force Survey).</p>
+
+    <h2>Wages</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Monthly earnings, 2024</caption>
+        <thead><tr><th>Measure</th><th class="num">Yen per month</th><th>Change</th></tr></thead>
+        <tbody>
+          <tr><td>Average monthly cash earnings, all workers</td><td class="num">348,182</td><td>+2.9% nominal year on year; real wages −0.2%</td></tr>
+          <tr><td>Average scheduled cash earnings, full-time employees</td><td class="num">330,200</td><td>+3.7% on the previous year</td></tr>
+          <tr><td>Average monthly contractual earnings, men (general workers)</td><td class="num">363,100</td><td>—</td></tr>
+          <tr><td>Average monthly contractual earnings, women (general workers)</td><td class="num">275,300</td><td>Women's pay at 75.8 when men's is 100 — the narrowest gender wage gap on record</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Source: MHLW, Monthly Labour Survey 2024 annual average (reported Feb 2025); MHLW, Basic Survey on Wage Structure 2024 (provisional report, Dec 2024).</p>
+
+    <div class="note">
+      <p><strong>Non-regular employment.</strong> About 54% of female employees and about 22% of male employees were in non-regular employment in 2024. Source: MHLW, Basic Survey on Wage Structure 2024.</p>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Japan Statistical Atlas</strong> — an independent compilation of official statistics. Not affiliated with the Government of Japan or any statistical agency.</p>
+    <p>Figures compiled 26 November 2026. Sources: Statistics Bureau of Japan · Cabinet Office · Ministry of Health, Labour and Welfare · Ministry of Finance · IMF · World Bank · OECD · United Nations.</p>
+    <nav aria-label="Footer navigation"><a href="index.html">Overview</a> · <a href="population.html">Population</a> · <a href="economy.html">Economy</a> · <a href="labour.html">Labour</a> · <a href="prices.html">Prices</a> · <a href="trade.html">Trade</a> · <a href="regions.html">Regions</a> · <a href="sources.html">Sources &amp; method</a></nav>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

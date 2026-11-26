@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regions — Japan Statistical Atlas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="wordmark">Japan <span class="atlas">Statistical Atlas</span></p>
+    <p class="tagline">An independent atlas of Japan's official statistics</p>
+    <p class="meta">Figures compiled 26 November 2026 from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health, Labour and Welfare, the Ministry of Finance, the IMF, the World Bank, the OECD and the United Nations.</p>
+  </div>
+</header>
+<nav class="mainnav" aria-label="Main navigation">
+  <div class="wrap">
+    <button class="nav-toggle" type="button" aria-expanded="false">Menu ☰</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="population.html">Population</a></li>
+      <li><a href="economy.html">Economy</a></li>
+      <li><a href="labour.html">Labour</a></li>
+      <li><a href="prices.html">Prices</a></li>
+      <li><a href="trade.html">Trade</a></li>
+      <li><a href="regions.html" aria-current="page">Regions</a></li>
+      <li><a href="sources.html">Sources &amp; method</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <h1>Regions</h1>
+    <p class="lede">Japan's 47 prefectures range from Tokyo, with 14.25 million people on 2,200 km², to Hokkaido, with 4.99 million people on 83,422 km². The ten largest prefectures hold about 58.6% of the national population. Only Tokyo and Okinawa grew between the 2020 and 2025 censuses; the other 45 prefectures shrank.</p>
+
+    <h2>Prefectures</h2>
+    <div class="filter-row">
+      <label for="pref-filter">Filter prefectures</label>
+      <input type="search" id="pref-filter" placeholder="Type a name, e.g. Osaka" autocomplete="off">
+      <span class="filter-count" id="pref-count"></span>
+    </div>
+    <div class="table-scroll">
+      <table id="pref-table">
+        <caption>Largest and smallest prefectures — click a column heading to sort</caption>
+        <thead><tr>
+          <th class="sortable" data-sort="name">Prefecture</th>
+          <th class="sortable num" data-sort="pop">Population</th>
+          <th class="sortable num" data-sort="area">Area (km²)</th>
+          <th class="sortable num" data-sort="density">Density (per km²)</th>
+          <th>Note</th>
+        </tr></thead>
+        <tbody id="pref-tbody"></tbody>
+      </table>
+    </div>
+    <p class="src">Source: Statistics Bureau of Japan, 2025 Population Census (preliminary counts) for population; Geospatial Information Authority / World Population Review for area and density. Population figures for Tottori, Shimane and Kochi are 2024 estimates (Statistics Bureau of Japan, Population Estimates); Hokkaido density is computed from its census population and published area. The top five prefectures together hold 37.9% of the national population.</p>
+
+    <h2>Metropolitan areas</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Major metropolitan and urban areas</caption>
+        <thead><tr><th>Area</th><th class="num">Population</th><th>Definition / source</th></tr></thead>
+        <tbody>
+          <tr><td>Greater Tokyo Area</td><td class="num">≈37.8 million</td><td>Tokyo Metropolitan Government; Kanto Major Metropolitan Area 37,273,866 (2015 census)</td></tr>
+          <tr><td>Tokyo Major Employment Area</td><td class="num">35,632,624</td><td>2020 census definition</td></tr>
+          <tr><td>Keihanshin (Osaka–Kobe–Kyoto)</td><td class="num">19,302,746</td><td>Major Metropolitan Area, 2015 census; Osaka Major Employment Area 11,874,910 (2020 census)</td></tr>
+          <tr><td>Chukyo (Nagoya)</td><td class="num">9,363,221</td><td>Major Metropolitan Area, 2015 census; Nagoya Major Employment Area 6,724,526 (2020 census)</td></tr>
+          <tr><td>Tokyo (OECD functional urban area)</td><td class="num">36,803,277</td><td>OECD, 2020</td></tr>
+          <tr><td>Osaka (OECD functional urban area)</td><td class="num">17,006,838</td><td>OECD, 2020</td></tr>
+          <tr><td>Nagoya (OECD functional urban area)</td><td class="num">8,685,436</td><td>OECD, 2020</td></tr>
+          <tr><td>Tokyo (UN urban agglomeration)</td><td class="num">33.4 million</td><td>UN World Urbanization Prospects 2025</td></tr>
+          <tr><td>Osaka / Keihanshin (UN)</td><td class="num">13.0 million</td><td>UN World Urbanization Prospects 2025</td></tr>
+          <tr><td>Nagoya / Chukyo (UN)</td><td class="num">7.1 million</td><td>UN World Urbanization Prospects 2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Source: Statistics Bureau of Japan, Population Census; OECD; UN World Urbanization Prospects 2025.</p>
+
+    <h2>Prefectural economies</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>Prefectural accounts</caption>
+        <thead><tr><th>Measure</th><th class="num">Value</th><th>Rank / note</th></tr></thead>
+        <tbody>
+          <tr><td>Tokyo nominal GDP, FY2022</td><td class="num">120.22 trillion yen</td><td>1st of 47 prefectures</td></tr>
+          <tr><td>Aichi nominal GDP, FY2022</td><td class="num">43.08 trillion yen</td><td>3rd of 47 prefectures</td></tr>
+          <tr><td>Tokyo GDP per capita, FY2022</td><td class="num">8,479,300 yen</td><td>1st; national average 4,807,500 yen</td></tr>
+          <tr><td>Aichi GDP per capita, FY2022</td><td class="num">5,771,300 yen</td><td>2nd</td></tr>
+          <tr><td>Tokyo income per capita, 2020</td><td class="num">5.20 million yen</td><td>1st; national average 3.13 million yen</td></tr>
+          <tr><td>Aichi income per capita, 2020</td><td class="num">3.42 million yen</td><td>2nd</td></tr>
+          <tr><td>Fukui income per capita, 2020</td><td class="num">3.15 million yen</td><td>3rd</td></tr>
+          <tr><td>Okinawa income per capita, 2020</td><td class="num">2.18 million yen</td><td>Lowest of 47</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Source: Cabinet Office, Prefectural Accounts (via Aichi Prefectural Government).</p>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Japan Statistical Atlas</strong> — an independent compilation of official statistics. Not affiliated with the Government of Japan or any statistical agency.</p>
+    <p>Figures compiled 26 November 2026. Sources: Statistics Bureau of Japan · Cabinet Office · Ministry of Health, Labour and Welfare · Ministry of Finance · IMF · World Bank · OECD · United Nations.</p>
+    <nav aria-label="Footer navigation"><a href="index.html">Overview</a> · <a href="population.html">Population</a> · <a href="economy.html">Economy</a> · <a href="labour.html">Labour</a> · <a href="prices.html">Prices</a> · <a href="trade.html">Trade</a> · <a href="regions.html">Regions</a> · <a href="sources.html">Sources &amp; method</a></nav>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

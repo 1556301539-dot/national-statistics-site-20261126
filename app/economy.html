@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Economy — Japan Statistical Atlas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="wordmark">Japan <span class="atlas">Statistical Atlas</span></p>
+    <p class="tagline">An independent atlas of Japan's official statistics</p>
+    <p class="meta">Figures compiled 26 November 2026 from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health, Labour and Welfare, the Ministry of Finance, the IMF, the World Bank, the OECD and the United Nations.</p>
+  </div>
+</header>
+<nav class="mainnav" aria-label="Main navigation">
+  <div class="wrap">
+    <button class="nav-toggle" type="button" aria-expanded="false">Menu ☰</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="population.html">Population</a></li>
+      <li><a href="economy.html" aria-current="page">Economy</a></li>
+      <li><a href="labour.html">Labour</a></li>
+      <li><a href="prices.html">Prices</a></li>
+      <li><a href="trade.html">Trade</a></li>
+      <li><a href="regions.html">Regions</a></li>
+      <li><a href="sources.html">Sources &amp; method</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <h1>Economy</h1>
+    <p class="lede">Japan is the world's fourth-largest economy by nominal GDP. In yen terms the economy keeps growing; in dollar terms it shrank after 2021 as the yen weakened — the same economy, two different lenses.</p>
+
+    <div class="chart-box">
+      <h3>Nominal GDP</h3>
+      <div class="seg" id="seg-gdp" role="group" aria-label="Choose currency">
+        <button type="button" data-mode="jpy" aria-pressed="true">Yen (¥)</button>
+        <button type="button" data-mode="usd" aria-pressed="false">US dollars ($)</button>
+      </div>
+      <div id="chart-gdp"></div>
+      <p class="src">Yen: Cabinet Office, via FocusEconomics (revised figures), billion yen. Dollars: World Bank, World Development Indicators (current US dollars), billion dollars. The World Bank 2024 figure (US$4.03 trillion) differs from the IMF/Cabinet Office figure (US$4.19 trillion) by vintage and method; the IMF figure is used as the headline. Nominal GDP per capita in 2024 was US$33,785 (Cabinet Office, Dec 2025; IMF: US$33,820), ranking 24th among OECD members — a record low rank.</p>
+    </div>
+
+    <div class="chart-box">
+      <h3>Real GDP growth</h3>
+      <div id="chart-growth"></div>
+      <p class="src">Source: IMF, World Economic Outlook, April 2026. Percent change per year. The Cabinet Office's first estimate put 2024 real growth at +0.1% (Feb 2025 release); the IMF figure is shown here, by vintage and revision.</p>
+    </div>
+
+    <h2>What the economy is made of</h2>
+    <div class="table-scroll">
+      <table>
+        <caption>GDP by sector — value added shares, 2023</caption>
+        <thead><tr><th>Sector</th><th class="num">Share of GDP</th></tr></thead>
+        <tbody>
+          <tr><td>Agriculture, forestry and fishing</td><td class="num">0.94%</td></tr>
+          <tr><td>Industry</td><td class="num">28.60%</td></tr>
+          <tr><td>Services</td><td class="num">69.77%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Source: World Bank, national accounts, 2023. A 2024 vintage gives about 1.0% agriculture, 26.8% industry and 71.4% services (World Bank national accounts via economicactivity.org).</p>
+    <p>Manufacturing is the largest part of industry; the automotive industry alone generates roughly one-fifth of Japan's total manufacturing value added (World Bank / GDPIndex comparison, 2024).</p>
+
+    <div class="note">
+      <p><strong>Exports and imports.</strong> Exports of goods in 2024 were 107.09 trillion yen and imports 112.72 trillion yen (Ministry of Finance, Trade Statistics of Japan). Exports of goods and services were US$921.0 billion and imports US$958.4 billion (World Bank). See the <a href="trade.html">Trade</a> page for the full series.</p>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Japan Statistical Atlas</strong> — an independent compilation of official statistics. Not affiliated with the Government of Japan or any statistical agency.</p>
+    <p>Figures compiled 26 November 2026. Sources: Statistics Bureau of Japan · Cabinet Office · Ministry of Health, Labour and Welfare · Ministry of Finance · IMF · World Bank · OECD · United Nations.</p>
+    <nav aria-label="Footer navigation"><a href="index.html">Overview</a> · <a href="population.html">Population</a> · <a href="economy.html">Economy</a> · <a href="labour.html">Labour</a> · <a href="prices.html">Prices</a> · <a href="trade.html">Trade</a> · <a href="regions.html">Regions</a> · <a href="sources.html">Sources &amp; method</a></nav>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
