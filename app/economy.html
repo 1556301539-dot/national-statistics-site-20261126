@@ -3,81 +3,161 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Economy — Japan Statistical Atlas</title>
+<title>Economy — The Iceland Ledger</title>
 <link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
 </head>
 <body>
 <header class="masthead">
   <div class="wrap">
-    <p class="wordmark">Japan <span class="atlas">Statistical Atlas</span></p>
-    <p class="tagline">An independent atlas of Japan's official statistics</p>
-    <p class="meta">Figures compiled 26 November 2026 from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health, Labour and Welfare, the Ministry of Finance, the IMF, the World Bank, the OECD and the United Nations.</p>
+    <h1>The Iceland Ledger</h1>
+    <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
   </div>
 </header>
-<nav class="mainnav" aria-label="Main navigation">
+<nav class="nav" aria-label="Sections">
   <div class="wrap">
-    <button class="nav-toggle" type="button" aria-expanded="false">Menu ☰</button>
-    <ul class="nav-list">
-      <li><a href="index.html">Overview</a></li>
-      <li><a href="population.html">Population</a></li>
-      <li><a href="economy.html" aria-current="page">Economy</a></li>
-      <li><a href="labour.html">Labour</a></li>
-      <li><a href="prices.html">Prices</a></li>
-      <li><a href="trade.html">Trade</a></li>
-      <li><a href="regions.html">Regions</a></li>
-      <li><a href="sources.html">Sources &amp; method</a></li>
-    </ul>
+    <button class="menubtn" aria-expanded="false">Sections</button>
+    <div class="links">
+      <a href="index.html">Overview</a>
+      <a href="people.html">People</a>
+      <a href="energy.html">Energy</a>
+      <a href="economy.html" aria-current="page">Economy</a>
+      <a href="regions.html">Regions</a>
+      <a href="life.html">Daily life</a>
+    </div>
   </div>
 </nav>
 <main>
   <div class="wrap">
-    <h1>Economy</h1>
-    <p class="lede">Japan is the world's fourth-largest economy by nominal GDP. In yen terms the economy keeps growing; in dollar terms it shrank after 2021 as the yen weakened — the same economy, two different lenses.</p>
+    <p class="lede">Three things pay for Iceland: fish, aluminium, and visitors. In 2024 the economy shrank a little, prices ran hot, and yet visitors came back past their pre-pandemic level and spent more than ever. Use the switch below to compare 2024 with 2019, the last full year before the pandemic.</p>
 
-    <div class="chart-box">
-      <h3>Nominal GDP</h3>
-      <div class="seg" id="seg-gdp" role="group" aria-label="Choose currency">
-        <button type="button" data-mode="jpy" aria-pressed="true">Yen (¥)</button>
-        <button type="button" data-mode="usd" aria-pressed="false">US dollars ($)</button>
-      </div>
-      <div id="chart-gdp"></div>
-      <p class="src">Yen: Cabinet Office, via FocusEconomics (revised figures), billion yen. Dollars: World Bank, World Development Indicators (current US dollars), billion dollars. The World Bank 2024 figure (US$4.03 trillion) differs from the IMF/Cabinet Office figure (US$4.19 trillion) by vintage and method; the IMF figure is used as the headline. Nominal GDP per capita in 2024 was US$33,785 (Cabinet Office, Dec 2025; IMF: US$33,820), ranking 24th among OECD members — a record low rank.</p>
-    </div>
-
-    <div class="chart-box">
-      <h3>Real GDP growth</h3>
-      <div id="chart-growth"></div>
-      <p class="src">Source: IMF, World Economic Outlook, April 2026. Percent change per year. The Cabinet Office's first estimate put 2024 real growth at +0.1% (Feb 2025 release); the IMF figure is shown here, by vintage and revision.</p>
-    </div>
-
-    <h2>What the economy is made of</h2>
-    <div class="table-scroll">
-      <table>
-        <caption>GDP by sector — value added shares, 2023</caption>
-        <thead><tr><th>Sector</th><th class="num">Share of GDP</th></tr></thead>
+    <div class="tool">
+      <span class="seg" role="group" aria-label="Choose year">
+        <button type="button" data-year="2019" aria-pressed="false">2019</button>
+        <button type="button" data-year="2024" aria-pressed="true">2024</button>
+      </span>
+      <p class="small" id="y-note">Visitors back above the 2019 level; prices still hot.</p>
+      <div class="scrollx">
+      <table class="ledger">
+        <caption>Headline indicators, <span id="y-year">2024</span></caption>
         <tbody>
-          <tr><td>Agriculture, forestry and fishing</td><td class="num">0.94%</td></tr>
-          <tr><td>Industry</td><td class="num">28.60%</td></tr>
-          <tr><td>Services</td><td class="num">69.77%</td></tr>
+          <tr><td>Gross domestic product</td><td class="num" id="y-gdp">$33.3 bn</td></tr>
+          <tr><td>GDP per person</td><td class="num" id="y-gdppc">$86,664</td></tr>
+          <tr><td>Unemployment rate</td><td class="num" id="y-unemp">3.6%</td></tr>
+          <tr><td>Inflation (CPI)</td><td class="num" id="y-cpi">5.9%</td></tr>
+          <tr><td>Foreign visitors</td><td class="num" id="y-visitors">2,261,391</td></tr>
         </tbody>
       </table>
+      </div>
+      <p class="source">Sources: IMF (GDP), Statistics Iceland (unemployment, inflation), Icelandic Tourist Board (visitors).</p>
     </div>
-    <p class="src">Source: World Bank, national accounts, 2023. A 2024 vintage gives about 1.0% agriculture, 26.8% industry and 71.4% services (World Bank national accounts via economicactivity.org).</p>
-    <p>Manufacturing is the largest part of industry; the automotive industry alone generates roughly one-fifth of Japan's total manufacturing value added (World Bank / GDPIndex comparison, 2024).</p>
 
-    <div class="note">
-      <p><strong>Exports and imports.</strong> Exports of goods in 2024 were 107.09 trillion yen and imports 112.72 trillion yen (Ministry of Finance, Trade Statistics of Japan). Exports of goods and services were US$921.0 billion and imports US$958.4 billion (World Bank). See the <a href="trade.html">Trade</a> page for the full series.</p>
+    <div class="chart">
+      <h3>GDP: five years, current dollars</h3>
+      <svg viewBox="0 0 640 280" role="img" aria-label="Bar chart: Iceland GDP in billions of dollars, 2020 21.7, 2021 25.6, 2022 29.2, 2023 31.7, 2024 33.3">
+        <line x1="30" y1="230" x2="620" y2="230" stroke="#b9beb0" stroke-width="1"/>
+        <g fill="#486b38">
+          <rect x="40" y="100" width="72" height="130"/><rect x="160" y="76" width="72" height="154"/>
+          <rect x="280" y="55" width="72" height="175"/><rect x="400" y="40" width="72" height="190"/>
+          <rect x="520" y="30" width="72" height="200" fill="#c75b2b"/>
+        </g>
+        <g class="bar-value" text-anchor="middle">
+          <text x="76" y="90">$21.7</text><text x="196" y="66">$25.6</text><text x="316" y="45">$29.2</text>
+          <text x="436" y="30">$31.7</text><text x="556" y="20">$33.3</text>
+        </g>
+        <g class="axis" text-anchor="middle">
+          <text x="76" y="250">2020</text><text x="196" y="250">2021</text><text x="316" y="250">2022</text>
+          <text x="436" y="250">2023</text><text x="556" y="250">2024</text>
+        </g>
+        <text class="axis" x="30" y="20">Billion US dollars, current prices</text>
+      </svg>
+      <p class="chart-src">Source: IMF World Economic Outlook, 2020–2024. Real GDP growth in 2024 was −1.0%.</p>
     </div>
+
+    <h2>What Iceland sells</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Top export goods, 2024</caption>
+      <thead><tr><th>Product</th><th class="num">Export value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Unwrought aluminium</td><td class="num">$811 m</td><td>UN Comtrade, 2024</td></tr>
+        <tr><td>Frozen fish fillets</td><td class="num">$479 m</td><td>UN Comtrade, 2024</td></tr>
+        <tr><td>Fresh or chilled fish fillets</td><td class="num">$223 m</td><td>UN Comtrade, 2024</td></tr>
+        <tr><td>Cod, salted or in brine</td><td class="num">$149 m</td><td>UN Comtrade, 2024</td></tr>
+        <tr><td>Marine products, all kinds</td><td class="num">ISK 347 bn</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Cod, most valuable species</td><td class="num">ISK 143 bn</td><td>Statistics Iceland, 2024</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Fish: the old economy, still counting</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Catch and value, 2024</caption>
+      <thead><tr><th>Figure</th><th class="num">Value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Total catch, all species</td><td class="num">995,296 t</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Catch value, first sale</td><td class="num">ISK 171 bn</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Demersal fish</td><td class="num">423,165 t</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Cod</td><td class="num">223,862 t</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Cod value</td><td class="num">ISK 82.1 bn</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Haddock</td><td class="num">84,360 t</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Pelagic fish</td><td class="num">546,659 t</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Capelin caught</td><td class="num">0 t</td><td>Statistics Iceland, 2024</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">The catch fell 28% on 2023 because no capelin were caught at all; the cod quota for 2026/27 is set at 201,674 tonnes.</p>
+
+    <div class="chart">
+      <h3>Visitors: the boom, the cliff, the return</h3>
+      <svg viewBox="0 0 720 260" role="img" aria-label="Bar chart: foreign visitors in millions, 2019 1.99, 2020 0.48, 2021 0.69, 2022 1.70, 2023 2.21, 2024 2.26">
+        <line x1="30" y1="210" x2="700" y2="210" stroke="#b9beb0" stroke-width="1"/>
+        <g fill="#486b38">
+          <rect x="40" y="51" width="72" height="159"/><rect x="152" y="171" width="72" height="39"/>
+          <rect x="264" y="155" width="72" height="55"/><rect x="376" y="74" width="72" height="136"/>
+          <rect x="488" y="33" width="72" height="177"/><rect x="600" y="29" width="72" height="181" fill="#c75b2b"/>
+        </g>
+        <g class="bar-value" text-anchor="middle">
+          <text x="76" y="41">1.99m</text><text x="188" y="161">0.48m</text><text x="300" y="145">0.69m</text>
+          <text x="412" y="64">1.70m</text><text x="524" y="23">2.21m</text><text x="636" y="19">2.26m</text>
+        </g>
+        <g class="axis" text-anchor="middle">
+          <text x="76" y="230">2019</text><text x="188" y="230">2020</text><text x="300" y="230">2021</text>
+          <text x="412" y="230">2022</text><text x="524" y="230">2023</text><text x="636" y="230">2024</text>
+        </g>
+        <text class="axis" x="30" y="20">Million foreign visitors</text>
+      </svg>
+      <p class="chart-src">Source: Icelandic Tourist Board / Statistics Iceland, 2019–2024.</p>
+    </div>
+
+    <h2>Visitors: the new economy</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Tourism, 2024</caption>
+      <thead><tr><th>Figure</th><th class="num">Value</th><th>Source, year</th></tr></thead>
+      <tbody>
+        <tr><td>Foreign visitors</td><td class="num">2,261,391</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Visitors from the USA</td><td class="num">620,396</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Visitors from the UK</td><td class="num">266,246</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Visitors from Germany</td><td class="num">141,879</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Visitor spending</td><td class="num">ISK 540 bn</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Share of GDP</td><td class="num">8.1%</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Tourism jobs, monthly average</td><td class="num">31,600</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Share of all employment</td><td class="num">~14%</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Registered overnight stays</td><td class="num">9.6 m</td><td>Statistics Iceland, 2024</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">Visitor spending is about $4.2 billion at the 2024 exchange rate.</p>
   </div>
 </main>
-<footer class="site-footer">
+<footer class="pagefoot">
   <div class="wrap">
-    <p><strong>Japan Statistical Atlas</strong> — an independent compilation of official statistics. Not affiliated with the Government of Japan or any statistical agency.</p>
-    <p>Figures compiled 26 November 2026. Sources: Statistics Bureau of Japan · Cabinet Office · Ministry of Health, Labour and Welfare · Ministry of Finance · IMF · World Bank · OECD · United Nations.</p>
-    <nav aria-label="Footer navigation"><a href="index.html">Overview</a> · <a href="population.html">Population</a> · <a href="economy.html">Economy</a> · <a href="labour.html">Labour</a> · <a href="prices.html">Prices</a> · <a href="trade.html">Trade</a> · <a href="regions.html">Regions</a> · <a href="sources.html">Sources &amp; method</a></nav>
+    <p><b>The Iceland Ledger.</b> A statistical portrait of Iceland, built from public figures.</p>
+    <p>Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun (National Energy Authority) · Icelandic Tourist Board · Icelandic Meteorological Office. Static files only — this site loads nothing from the network and works offline.</p>
   </div>
 </footer>
-<script src="data.js"></script>
-<script src="site.js"></script>
 </body>
 </html>

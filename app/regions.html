@@ -3,107 +3,88 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Regions — Japan Statistical Atlas</title>
+<title>Regions — The Iceland Ledger</title>
 <link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
 </head>
 <body>
 <header class="masthead">
   <div class="wrap">
-    <p class="wordmark">Japan <span class="atlas">Statistical Atlas</span></p>
-    <p class="tagline">An independent atlas of Japan's official statistics</p>
-    <p class="meta">Figures compiled 26 November 2026 from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health, Labour and Welfare, the Ministry of Finance, the IMF, the World Bank, the OECD and the United Nations.</p>
+    <h1>The Iceland Ledger</h1>
+    <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
   </div>
 </header>
-<nav class="mainnav" aria-label="Main navigation">
+<nav class="nav" aria-label="Sections">
   <div class="wrap">
-    <button class="nav-toggle" type="button" aria-expanded="false">Menu ☰</button>
-    <ul class="nav-list">
-      <li><a href="index.html">Overview</a></li>
-      <li><a href="population.html">Population</a></li>
-      <li><a href="economy.html">Economy</a></li>
-      <li><a href="labour.html">Labour</a></li>
-      <li><a href="prices.html">Prices</a></li>
-      <li><a href="trade.html">Trade</a></li>
-      <li><a href="regions.html" aria-current="page">Regions</a></li>
-      <li><a href="sources.html">Sources &amp; method</a></li>
-    </ul>
+    <button class="menubtn" aria-expanded="false">Sections</button>
+    <div class="links">
+      <a href="index.html">Overview</a>
+      <a href="people.html">People</a>
+      <a href="energy.html">Energy</a>
+      <a href="economy.html">Economy</a>
+      <a href="regions.html" aria-current="page">Regions</a>
+      <a href="life.html">Daily life</a>
+    </div>
   </div>
 </nav>
 <main>
   <div class="wrap">
-    <h1>Regions</h1>
-    <p class="lede">Japan's 47 prefectures range from Tokyo, with 14.25 million people on 2,200 km², to Hokkaido, with 4.99 million people on 83,422 km². The ten largest prefectures hold about 58.6% of the national population. Only Tokyo and Okinawa grew between the 2020 and 2025 censuses; the other 45 prefectures shrank.</p>
+    <p class="lede">For statistics Iceland is cut into eight regions — a division fixed in its current form in December 2020. One of them holds nearly two-thirds of the country. Two of them hold about 7,000 people each. The bars below are the whole country, region by region.</p>
 
-    <h2>Prefectures</h2>
-    <div class="filter-row">
-      <label for="pref-filter">Filter prefectures</label>
-      <input type="search" id="pref-filter" placeholder="Type a name, e.g. Osaka" autocomplete="off">
-      <span class="filter-count" id="pref-count"></span>
+    <h2>The country, region by region</h2>
+    <div class="chart">
+      <h3>Population by region, 1 January 2024</h3>
+      <p>One bar per region. Length is people, not land — the Southern Region is the largest by area and fourth by people.</p>
+      <div class="regionbar"><span>Capital Region</span><span class="track"><span class="fill hot" style="display:block;width:100%"></span></span><span class="val">244,177</span></div>
+      <div class="regionbar"><span>Southern Region</span><span class="track"><span class="fill" style="display:block;width:14.0%"></span></span><span class="val">34,076</span></div>
+      <div class="regionbar"><span>Northeastern Region</span><span class="track"><span class="fill" style="display:block;width:12.9%"></span></span><span class="val">31,574</span></div>
+      <div class="regionbar"><span>Southern Peninsula</span><span class="track"><span class="fill" style="display:block;width:12.7%"></span></span><span class="val">30,933</span></div>
+      <div class="regionbar"><span>Western Region</span><span class="track"><span class="fill" style="display:block;width:7.1%"></span></span><span class="val">17,419</span></div>
+      <div class="regionbar"><span>Eastern Region</span><span class="track"><span class="fill" style="display:block;width:4.5%"></span></span><span class="val">11,085</span></div>
+      <div class="regionbar"><span>Northwestern Region</span><span class="track"><span class="fill" style="display:block;width:3.0%"></span></span><span class="val">7,294</span></div>
+      <div class="regionbar"><span>Westfjords</span><span class="track"><span class="fill" style="display:block;width:2.9%"></span></span><span class="val">7,168</span></div>
+      <p class="chart-src">Source: Statistics Iceland, population by region, 1 January 2024. Total 383,726 (regional estimates).</p>
     </div>
-    <div class="table-scroll">
-      <table id="pref-table">
-        <caption>Largest and smallest prefectures — click a column heading to sort</caption>
-        <thead><tr>
-          <th class="sortable" data-sort="name">Prefecture</th>
-          <th class="sortable num" data-sort="pop">Population</th>
-          <th class="sortable num" data-sort="area">Area (km²)</th>
-          <th class="sortable num" data-sort="density">Density (per km²)</th>
-          <th>Note</th>
-        </tr></thead>
-        <tbody id="pref-tbody"></tbody>
-      </table>
-    </div>
-    <p class="src">Source: Statistics Bureau of Japan, 2025 Population Census (preliminary counts) for population; Geospatial Information Authority / World Population Review for area and density. Population figures for Tottori, Shimane and Kochi are 2024 estimates (Statistics Bureau of Japan, Population Estimates); Hokkaido density is computed from its census population and published area. The top five prefectures together hold 37.9% of the national population.</p>
 
-    <h2>Metropolitan areas</h2>
-    <div class="table-scroll">
-      <table>
-        <caption>Major metropolitan and urban areas</caption>
-        <thead><tr><th>Area</th><th class="num">Population</th><th>Definition / source</th></tr></thead>
-        <tbody>
-          <tr><td>Greater Tokyo Area</td><td class="num">≈37.8 million</td><td>Tokyo Metropolitan Government; Kanto Major Metropolitan Area 37,273,866 (2015 census)</td></tr>
-          <tr><td>Tokyo Major Employment Area</td><td class="num">35,632,624</td><td>2020 census definition</td></tr>
-          <tr><td>Keihanshin (Osaka–Kobe–Kyoto)</td><td class="num">19,302,746</td><td>Major Metropolitan Area, 2015 census; Osaka Major Employment Area 11,874,910 (2020 census)</td></tr>
-          <tr><td>Chukyo (Nagoya)</td><td class="num">9,363,221</td><td>Major Metropolitan Area, 2015 census; Nagoya Major Employment Area 6,724,526 (2020 census)</td></tr>
-          <tr><td>Tokyo (OECD functional urban area)</td><td class="num">36,803,277</td><td>OECD, 2020</td></tr>
-          <tr><td>Osaka (OECD functional urban area)</td><td class="num">17,006,838</td><td>OECD, 2020</td></tr>
-          <tr><td>Nagoya (OECD functional urban area)</td><td class="num">8,685,436</td><td>OECD, 2020</td></tr>
-          <tr><td>Tokyo (UN urban agglomeration)</td><td class="num">33.4 million</td><td>UN World Urbanization Prospects 2025</td></tr>
-          <tr><td>Osaka / Keihanshin (UN)</td><td class="num">13.0 million</td><td>UN World Urbanization Prospects 2025</td></tr>
-          <tr><td>Nagoya / Chukyo (UN)</td><td class="num">7.1 million</td><td>UN World Urbanization Prospects 2025</td></tr>
-        </tbody>
-      </table>
+    <h2>Compare any two regions</h2>
+    <p>Pick two regions and the ledger sets them side by side — population, area, density, largest town, and what each is known for.</p>
+    <div class="tool">
+      <label for="region-a">First region</label>
+      <select id="region-a"></select>
+      <label for="region-b">Second region</label>
+      <select id="region-b"></select>
+      <div id="compare-out"></div>
     </div>
-    <p class="src">Source: Statistics Bureau of Japan, Population Census; OECD; UN World Urbanization Prospects 2025.</p>
 
-    <h2>Prefectural economies</h2>
-    <div class="table-scroll">
-      <table>
-        <caption>Prefectural accounts</caption>
-        <thead><tr><th>Measure</th><th class="num">Value</th><th>Rank / note</th></tr></thead>
-        <tbody>
-          <tr><td>Tokyo nominal GDP, FY2022</td><td class="num">120.22 trillion yen</td><td>1st of 47 prefectures</td></tr>
-          <tr><td>Aichi nominal GDP, FY2022</td><td class="num">43.08 trillion yen</td><td>3rd of 47 prefectures</td></tr>
-          <tr><td>Tokyo GDP per capita, FY2022</td><td class="num">8,479,300 yen</td><td>1st; national average 4,807,500 yen</td></tr>
-          <tr><td>Aichi GDP per capita, FY2022</td><td class="num">5,771,300 yen</td><td>2nd</td></tr>
-          <tr><td>Tokyo income per capita, 2020</td><td class="num">5.20 million yen</td><td>1st; national average 3.13 million yen</td></tr>
-          <tr><td>Aichi income per capita, 2020</td><td class="num">3.42 million yen</td><td>2nd</td></tr>
-          <tr><td>Fukui income per capita, 2020</td><td class="num">3.15 million yen</td><td>3rd</td></tr>
-          <tr><td>Okinawa income per capita, 2020</td><td class="num">2.18 million yen</td><td>Lowest of 47</td></tr>
-        </tbody>
-      </table>
+    <h2>The eight regions</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Population, area, and largest town</caption>
+      <thead><tr><th>Region</th><th class="num">People</th><th class="num">Area km²</th><th class="num">Per km²</th><th>Largest town</th></tr></thead>
+      <tbody>
+        <tr><td>Capital Region</td><td class="num">244,177</td><td class="num">1,062</td><td class="num">229.9</td><td>Reykjavík</td></tr>
+        <tr><td>Southern Peninsula</td><td class="num">30,933</td><td class="num">829</td><td class="num">37.3</td><td>Reykjanesbær</td></tr>
+        <tr><td>Western Region</td><td class="num">17,419</td><td class="num">9,554</td><td class="num">1.8</td><td>Akranes</td></tr>
+        <tr><td>Westfjords</td><td class="num">7,168</td><td class="num">9,409</td><td class="num">0.8</td><td>Ísafjörður</td></tr>
+        <tr><td>Northwestern Region</td><td class="num">7,294</td><td class="num">12,737</td><td class="num">0.6</td><td>Sauðárkrókur</td></tr>
+        <tr><td>Northeastern Region</td><td class="num">31,574</td><td class="num">21,968</td><td class="num">1.4</td><td>Akureyri</td></tr>
+        <tr><td>Eastern Region</td><td class="num">11,085</td><td class="num">16,412</td><td class="num">0.7</td><td>Egilsstaðir</td></tr>
+        <tr><td>Southern Region</td><td class="num">34,076</td><td class="num">30,835</td><td class="num">1.1</td><td>Selfoss</td></tr>
+        <tr class="total"><td>Iceland</td><td class="num">383,726</td><td class="num">102,775</td><td class="num">3.7</td><td>Reykjavík</td></tr>
+      </tbody>
+    </table>
     </div>
-    <p class="src">Source: Cabinet Office, Prefectural Accounts (via Aichi Prefectural Government).</p>
+    <p class="source">Source: Statistics Iceland, 1 January 2024 (regional estimates; the national total at the same date is 387,758 — the difference is estimation rounding across the two series). Densities are computed from these figures.</p>
+
+    <div class="note"><b>The odd one out is the Westfjords.</b> 7,168 people on 9,409 km² — 0.8 per km² — and the only region whose population fell over the long run before stabilising. Its largest town, Ísafjörður, has about 2,600 people. Source: Statistics Iceland, 2024.</div>
   </div>
 </main>
-<footer class="site-footer">
+<footer class="pagefoot">
   <div class="wrap">
-    <p><strong>Japan Statistical Atlas</strong> — an independent compilation of official statistics. Not affiliated with the Government of Japan or any statistical agency.</p>
-    <p>Figures compiled 26 November 2026. Sources: Statistics Bureau of Japan · Cabinet Office · Ministry of Health, Labour and Welfare · Ministry of Finance · IMF · World Bank · OECD · United Nations.</p>
-    <nav aria-label="Footer navigation"><a href="index.html">Overview</a> · <a href="population.html">Population</a> · <a href="economy.html">Economy</a> · <a href="labour.html">Labour</a> · <a href="prices.html">Prices</a> · <a href="trade.html">Trade</a> · <a href="regions.html">Regions</a> · <a href="sources.html">Sources &amp; method</a></nav>
+    <p><b>The Iceland Ledger.</b> A statistical portrait of Iceland, built from public figures.</p>
+    <p>Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun (National Energy Authority) · Icelandic Tourist Board · Icelandic Meteorological Office. Static files only — this site loads nothing from the network and works offline.</p>
   </div>
 </footer>
-<script src="data.js"></script>
-<script src="site.js"></script>
 </body>
 </html>

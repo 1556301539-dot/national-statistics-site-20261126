@@ -3,116 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Japan Statistical Atlas — Overview</title>
+<title>The Iceland Ledger — Every figure that runs a volcanic island</title>
 <link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
 </head>
 <body>
 <header class="masthead">
   <div class="wrap">
-    <p class="wordmark">Japan <span class="atlas">Statistical Atlas</span></p>
-    <p class="tagline">An independent atlas of Japan's official statistics</p>
-    <p class="meta">Figures compiled 26 November 2026 from the Statistics Bureau of Japan, the Cabinet Office, the Ministry of Health, Labour and Welfare, the Ministry of Finance, the IMF, the World Bank, the OECD and the United Nations. Every figure on this site carries its source and year.</p>
+    <h1>The Iceland Ledger</h1>
+    <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
   </div>
 </header>
-<nav class="mainnav" aria-label="Main navigation">
+<nav class="nav" aria-label="Sections">
   <div class="wrap">
-    <button class="nav-toggle" type="button" aria-expanded="false">Menu ☰</button>
-    <ul class="nav-list">
-      <li><a href="index.html" aria-current="page">Overview</a></li>
-      <li><a href="population.html">Population</a></li>
-      <li><a href="economy.html">Economy</a></li>
-      <li><a href="labour.html">Labour</a></li>
-      <li><a href="prices.html">Prices</a></li>
-      <li><a href="trade.html">Trade</a></li>
-      <li><a href="regions.html">Regions</a></li>
-      <li><a href="sources.html">Sources &amp; method</a></li>
-    </ul>
+    <button class="menubtn" aria-expanded="false">Sections</button>
+    <div class="links">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="people.html">People</a>
+      <a href="energy.html">Energy</a>
+      <a href="economy.html">Economy</a>
+      <a href="regions.html">Regions</a>
+      <a href="life.html">Daily life</a>
+    </div>
   </div>
 </nav>
 <main>
   <div class="wrap">
-    <h1>Japan in numbers</h1>
-    <p class="lede">The world's fourth-largest economy and its most aged society, in eight headline indicators — each drawn from an official or international publication and cited where it stands.</p>
+    <p class="lede">Iceland is the smallest country in this ledger's league and the strangest: 387,000 people on a volcanic island in the North Atlantic, running an almost entirely renewable grid, catching a million tonnes of fish, and hosting nearly six times their own number in visitors every year. This site puts the whole country in one place, figure by figure, with the source and year under each one.</p>
 
-    <div class="kpi-grid">
-      <div class="kpi"><div class="value">123.80 <small>million</small></div><div class="label">Population</div><div class="change">−0.44% on the previous year; 14th consecutive annual decline</div><p class="src">Statistics Bureau of Japan, Population Estimates, 1 Oct 2024</p></div>
-      <div class="kpi"><div class="value">636,893 <small>bn yen</small></div><div class="label">Nominal GDP</div><div class="change">US$4,190 billion (IMF); 4th largest economy in the world</div><p class="src">Cabinet Office, Quarterly Estimates of GDP; IMF WEO Apr 2026</p></div>
-      <div class="kpi"><div class="value">2.5<small>%</small></div><div class="label">Unemployment rate</div><div class="change">Annual average 2024, down from 2.6% in 2023</div><p class="src">Statistics Bureau of Japan, Labour Force Survey, 2024</p></div>
-      <div class="kpi"><div class="value">+2.7<small>%</small></div><div class="label">CPI inflation</div><div class="change">All items, annual average 2024, year on year</div><p class="src">Statistics Bureau of Japan, Annual Report on the CPI, 2024</p></div>
-      <div class="kpi"><div class="value">236.7<small>% of GDP</small></div><div class="label">Government gross debt</div><div class="change">2024; down from a 2020 peak of 258.4%</div><p class="src">IMF Global Debt Database, Sep 2025</p></div>
-      <div class="kpi"><div class="value">84.04 <small>years</small></div><div class="label">Life expectancy</div><div class="change">81.09 for men, 87.13 for women; women longest in the world, 40th year running</div><p class="src">MHLW, Simplified Life Tables, 2024</p></div>
-      <div class="kpi"><div class="value">49.4 <small>years</small></div><div class="label">Median age</div><div class="change">Highest since 1950; second-highest in the world after Monaco</div><p class="src">UN World Population Prospects 2024</p></div>
-      <div class="kpi"><div class="value">1.15</div><div class="label">Total fertility rate</div><div class="change">Record low in 2024, down from 1.20 in 2023</div><p class="src">MHLW, Vital Statistics 2024 (confirmed)</p></div>
+    <div class="hero">
+      <figure>
+        <span class="num">99.98%</span>
+        <span class="cap">of electricity from renewable sources</span>
+        <span class="src">Eurostat, 2024 — hydro 69.4%, geothermal 30.5%</span>
+      </figure>
+      <figure>
+        <span class="num">387,758</span>
+        <span class="cap">people, 1 January 2024</span>
+        <span class="src">Statistics Iceland, 2024</span>
+      </figure>
+      <figure>
+        <span class="num">2,261,391</span>
+        <span class="cap">foreign visitors in 2024</span>
+        <span class="src">Icelandic Tourist Board, 2024</span>
+      </figure>
     </div>
 
-    <div class="chart-row">
-      <div class="chart-box">
-        <h3>Population is shrinking every year</h3>
-        <div id="chart-pop-trend"></div>
-        <p class="src">Source: Statistics Bureau of Japan, Population Estimates; World Bank WDI series. 1 October estimates, million people. Population peaked at 128.06 million in the 2010 census and has fallen every year since 2011.</p>
-      </div>
-      <div class="chart-box">
-        <h3>Nominal GDP in yen keeps rising</h3>
-        <div id="chart-gdp-overview"></div>
-        <p class="src">Source: Cabinet Office, via FocusEconomics (revised figures). Nominal GDP, trillion yen. The February 2025 first estimate (609.29 trillion yen) was later revised upward.</p>
-      </div>
+    <h2>The country at a glance</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>The ledger, one line per fact</caption>
+      <thead><tr><th>Figure</th><th class="num">Value</th><th>Source, year</th></tr></thead>
+      <tbody>
+        <tr><td>Population, 1 January 2024</td><td class="num">387,758</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Land area</td><td class="num">102,775 km²</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>People per km²</td><td class="num">3.8</td><td>Statistics Iceland, 2025</td></tr>
+        <tr><td>Capital and largest city</td><td class="num">Reykjavík, 136,894</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Gross domestic product</td><td class="num">$33.3 bn</td><td>World Bank, 2024</td></tr>
+        <tr><td>GDP per person</td><td class="num">$86,664</td><td>Destatis / IMF, 2024</td></tr>
+        <tr><td>Real GDP growth</td><td class="num">−1.0%</td><td>IMF, 2024</td></tr>
+        <tr><td>Inflation (CPI)</td><td class="num">5.9%</td><td>World Bank, 2024</td></tr>
+        <tr><td>Unemployment rate</td><td class="num">3.6%</td><td>World Bank, 2024</td></tr>
+        <tr><td>Life expectancy, women / men</td><td class="num">84.5 / 81.1 yrs</td><td>Destatis, 2024</td></tr>
+        <tr><td>Fertility rate</td><td class="num">1.56</td><td>Destatis, 2024</td></tr>
+        <tr><td>Electricity generated</td><td class="num">19,606 GWh</td><td>Eurostat, 2024</td></tr>
+        <tr><td>Foreign visitors</td><td class="num">2,261,391</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Total fish catch</td><td class="num">995,296 t</td><td>Statistics Iceland, 2024</td></tr>
+        <tr><td>Marine product exports</td><td class="num">ISK 347 bn</td><td>Statistics Iceland, 2024</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">All figures as published by the source named. Money is in current US dollars unless marked ISK.</p>
+
+    <div class="chart">
+      <h3>People: a decade of growth</h3>
+      <p>Population at 1 January, 2015–2024. The island added about 59,000 people in ten years — most of it immigration.</p>
+      <svg viewBox="0 0 960 300" role="img" aria-label="Bar chart: Iceland population 2015 to 2024, rising from 329,100 to 387,800">
+        <line x1="30" y1="250" x2="950" y2="250" stroke="#b9beb0" stroke-width="1"/>
+        <g fill="#486b38">
+          <rect x="40" y="186" width="64" height="64"/><rect x="132" y="178" width="64" height="72"/>
+          <rect x="224" y="166" width="64" height="84"/><rect x="316" y="143" width="64" height="107"/>
+          <rect x="408" y="125" width="64" height="125"/><rect x="500" y="109" width="64" height="141"/>
+          <rect x="592" y="99" width="64" height="151"/><rect x="684" y="82" width="64" height="168"/>
+          <rect x="776" y="70" width="64" height="180"/><rect x="868" y="57" width="64" height="193" fill="#c75b2b"/>
+        </g>
+        <g class="bar-value" text-anchor="middle">
+          <text x="72" y="176">329</text><text x="164" y="168">333</text><text x="256" y="156">338</text>
+          <text x="348" y="133">349</text><text x="440" y="115">357</text><text x="532" y="99">364</text>
+          <text x="624" y="89">369</text><text x="716" y="72">376</text><text x="808" y="60">382</text>
+          <text x="900" y="47">388</text>
+        </g>
+        <g class="axis" text-anchor="middle">
+          <text x="72" y="270">2015</text><text x="164" y="270">2016</text><text x="256" y="270">2017</text>
+          <text x="348" y="270">2018</text><text x="440" y="270">2019</text><text x="532" y="270">2020</text>
+          <text x="624" y="270">2021</text><text x="716" y="270">2022</text><text x="808" y="270">2023</text>
+          <text x="900" y="270">2024</text>
+        </g>
+        <text class="axis" x="30" y="20">Thousands of people</text>
+      </svg>
+      <p class="chart-src">Source: Statistics Iceland, population at 1 January, 2015–2024 (rounded to the nearest 100). Bars start at 300,000 people.</p>
     </div>
 
-    <h2>Japan at a glance</h2>
-    <div class="table-scroll">
-      <table>
-        <caption>Country facts, each with its source</caption>
-        <thead><tr><th>Measure</th><th>Value</th><th>Detail</th><th>Source</th></tr></thead>
-        <tbody>
-          <tr><td>Land area</td><td>377,975 km²</td><td>63rd in the world</td><td>Geospatial Information Authority of Japan, 1 Oct 2024</td></tr>
-          <tr><td>Population density</td><td>≈328 people per km²</td><td>Of total area</td><td>Statistics Bureau of Japan + GSI, 2024</td></tr>
-          <tr><td>Urban population share</td><td>92.2%</td><td>Of the population lives in urban areas</td><td>UN World Population Prospects 2024</td></tr>
-          <tr><td>GDP per capita</td><td>US$33,785</td><td>24th among OECD members, a record low rank</td><td>Cabinet Office, Dec 2025 (IMF: US$33,820)</td></tr>
-          <tr><td>GDP rank</td><td>4th largest</td><td>After the United States, China and Germany</td><td>Cabinet Office / IMF, 2024</td></tr>
-          <tr><td>Population rank</td><td>12th largest</td><td>Country by population</td><td>UN World Population Prospects 2024</td></tr>
-          <tr><td>Households</td><td>57,124,507</td><td>Record high; average size 2.15 people, a record low</td><td>Statistics Bureau of Japan, 2025 Population Census</td></tr>
-          <tr><td>Single-person households</td><td>41.4%</td><td>Of all households</td><td>Statistics Bureau of Japan, 2025 Population Census</td></tr>
-          <tr><td>Foreign residents</td><td>4,031,159</td><td>Of 123,767,642 registered residents</td><td>MIC, Basic Resident Register, Jan 2026</td></tr>
-          <tr><td>Internet users</td><td>85.5%</td><td>Of the population used the internet in the last three months</td><td>World Bank WDI (ITU data), 2024</td></tr>
-          <tr><td>Centenarians</td><td>Over 100,000</td><td>First time, Sep 2025; about 88% are women</td><td>MHLW, Sep 2025</td></tr>
-          <tr><td>Marriages</td><td>485,063</td><td>In 2024; 489,119 (approx.) in 2025, up a second year</td><td>MHLW Vital Statistics</td></tr>
-        </tbody>
-      </table>
+    <h2>What is in this ledger</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <thead><tr><th>Section</th><th>What it answers</th></tr></thead>
+      <tbody>
+        <tr><td><a href="people.html">People</a></td><td>Who lives here, how long they live, where they cluster — towns, ages, origins.</td></tr>
+        <tr><td><a href="energy.html">Energy</a></td><td>How a volcanic island makes 99.98% renewable electricity and heats nine in ten homes from the ground.</td></tr>
+        <tr><td><a href="economy.html">Economy</a></td><td>What the country sells — fish, aluminium, visitors — and what it costs to live here. With a 2019 / 2024 switch.</td></tr>
+        <tr><td><a href="regions.html">Regions</a></td><td>The eight regions, bar by bar, with a tool to compare any two side by side.</td></tr>
+        <tr><td><a href="life.html">Daily life</a></td><td>Weather by month, daylight, prices, and the facts that frame a year in Iceland.</td></tr>
+      </tbody>
+    </table>
     </div>
 
-    <div class="updates">
-      <h3>Latest releases</h3>
-      <ul>
-        <li><strong>29 May 2026</strong> — 2025 Population Census preliminary counts: population 123,049,524, down 2.5% from 2020 (Statistics Bureau of Japan).</li>
-        <li><strong>Dec 2025</strong> — FY2024 Annual Estimates of National Accounts, including the international GDP comparison (Cabinet Office).</li>
-        <li><strong>Sep 2025</strong> — Vital Statistics 2024 confirmed figures: 686,173 births, 1,605,378 deaths (MHLW).</li>
-        <li><strong>Jul 2025</strong> — Simplified Life Tables 2024: life expectancy 84.04 years (MHLW).</li>
-        <li><strong>Apr 2026</strong> — IMF World Economic Outlook, April 2026: nominal GDP US$4,190 billion; real growth −0.24% in 2024.</li>
-      </ul>
-    </div>
-
-    <h2>Society in brief</h2>
-    <div class="cols">
-      <div>
-        <p>Life expectancy at birth in 2024 was <strong>84.04 years</strong> overall — 81.09 for men and 87.13 for women (MHLW, Simplified Life Tables 2024). In 2019 men averaged 72.68 healthy years and women 75.38 healthy years (MHLW).</p>
-        <p>There were <strong>80.58 centenarians per 100,000 people</strong> nationally in 2025; Shimane Prefecture leads at 168.69 per 100,000, for the 13th consecutive year (MHLW).</p>
-      </div>
-      <div>
-        <p>More than <strong>1 in 10 people</strong> in Japan is now aged 80 or older (World Economic Forum, citing Japanese government statistics).</p>
-        <p>The population is projected to fall to roughly <strong>87 million by 2070</strong>, with about 40% aged 65 or over (National Institute of Population and Social Security Research).</p>
-      </div>
-    </div>
-    <p class="src">All figures on this page are cited next to the figure they describe. See the Sources &amp; method page for the full publication list.</p>
+    <div class="note"><b>How to read this site.</b> Every figure carries its source and year — in the line beneath it, not hidden in a footnote file. Where a number is rounded, it says so. Where two sources disagree, the table names the one used.</div>
   </div>
 </main>
-<footer class="site-footer">
+<footer class="pagefoot">
   <div class="wrap">
-    <p><strong>Japan Statistical Atlas</strong> — an independent compilation of official statistics. Not affiliated with the Government of Japan or any statistical agency.</p>
-    <p>Figures compiled 26 November 2026. Sources: Statistics Bureau of Japan · Cabinet Office · Ministry of Health, Labour and Welfare · Ministry of Finance · IMF · World Bank · OECD · United Nations.</p>
-    <nav aria-label="Footer navigation"><a href="index.html">Overview</a> · <a href="population.html">Population</a> · <a href="economy.html">Economy</a> · <a href="labour.html">Labour</a> · <a href="prices.html">Prices</a> · <a href="trade.html">Trade</a> · <a href="regions.html">Regions</a> · <a href="sources.html">Sources &amp; method</a></nav>
+    <p><b>The Iceland Ledger.</b> A statistical portrait of Iceland, built from public figures.</p>
+    <p>Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun (National Energy Authority) · Icelandic Tourist Board · Icelandic Meteorological Office. Static files only — this site loads nothing from the network and works offline.</p>
   </div>
 </footer>
-<script src="data.js"></script>
-<script src="site.js"></script>
 </body>
 </html>

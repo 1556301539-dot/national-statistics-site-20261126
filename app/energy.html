@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energy — The Iceland Ledger</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <h1>The Iceland Ledger</h1>
+    <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+  </div>
+</header>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <button class="menubtn" aria-expanded="false">Sections</button>
+    <div class="links">
+      <a href="index.html">Overview</a>
+      <a href="people.html">People</a>
+      <a href="energy.html" aria-current="page">Energy</a>
+      <a href="economy.html">Economy</a>
+      <a href="regions.html">Regions</a>
+      <a href="life.html">Daily life</a>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <p class="lede">Iceland sits on the Mid-Atlantic Ridge, and it shows in the power grid: rivers and volcanoes make the electricity, volcanoes heat the homes, and the country uses more electricity per person than anywhere else on Earth — mostly to smelt aluminium.</p>
+
+    <div class="hero">
+      <figure>
+        <span class="num">19,606</span>
+        <span class="cap">GWh of electricity generated</span>
+        <span class="src">Eurostat, 2024</span>
+      </figure>
+      <figure>
+        <span class="num">99.98%</span>
+        <span class="cap">of it renewable</span>
+        <span class="src">Eurostat, 2024</span>
+      </figure>
+      <figure>
+        <span class="num">70.4%</span>
+        <span class="cap">of all primary energy is geothermal</span>
+        <span class="src">Orkustofnun, 2020</span>
+      </figure>
+    </div>
+
+    <div class="chart">
+      <h3>Where the electricity comes from, 2024</h3>
+      <p>Hydro does the heavy lifting; geothermal does the rest. Fossil fuel is a rounding error.</p>
+      <svg viewBox="0 0 640 240" role="img" aria-label="Donut chart: hydropower 69.4 percent, geothermal 30.5 percent, wind 0.1 percent of electricity generation in 2024">
+        <g transform="translate(120,120) rotate(-90)">
+          <circle r="80" fill="none" stroke="#7fa8bc" stroke-width="34" stroke-dasharray="348.8 153.9"/>
+          <circle r="80" fill="none" stroke="#c75b2b" stroke-width="34" stroke-dasharray="153.3 349.4" stroke-dashoffset="-348.8"/>
+          <circle r="80" fill="none" stroke="#486b38" stroke-width="34" stroke-dasharray="0.5 502.2" stroke-dashoffset="-502.1"/>
+        </g>
+        <text x="120" y="114" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700">19,606</text>
+        <text x="120" y="136" text-anchor="middle" font-size="12" fill="#6b7268">GWh in 2024</text>
+        <g font-size="14">
+          <rect x="270" y="52" width="16" height="16" fill="#7fa8bc"/><text x="294" y="65">Hydropower — 13,604 GWh, 69.4%</text>
+          <rect x="270" y="88" width="16" height="16" fill="#c75b2b"/><text x="294" y="101">Geothermal — 5,986 GWh, 30.5%</text>
+          <rect x="270" y="124" width="16" height="16" fill="#486b38"/><text x="294" y="137">Wind — 13 GWh, 0.06%</text>
+          <rect x="270" y="160" width="16" height="16" fill="#b9beb0"/><text x="294" y="173">Fossil fuels — 3 GWh, 0.02%</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: Eurostat, electricity generation by source, 2024. The renewable share has been above 99.8% in every year since 1990.</p>
+    </div>
+
+    <h2>Electricity by source</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Generation, 2024</caption>
+      <thead><tr><th>Source</th><th class="num">GWh</th><th class="num">Share</th></tr></thead>
+      <tbody>
+        <tr><td>Hydropower</td><td class="num">13,604</td><td class="num">69.4%</td></tr>
+        <tr><td>Geothermal</td><td class="num">5,986</td><td class="num">30.5%</td></tr>
+        <tr><td>Wind</td><td class="num">13</td><td class="num">0.06%</td></tr>
+        <tr><td>Fossil fuels</td><td class="num">3</td><td class="num">0.02%</td></tr>
+        <tr class="total"><td>Total</td><td class="num">19,606</td><td class="num">100%</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">Source: Eurostat, 2024.</p>
+
+    <h2>All energy, not just electricity</h2>
+    <p>Electricity is the clean part. Counting heat and transport too, geothermal still dominates — it is the largest single energy source in the country — but oil keeps a tenth of the total, almost all of it in ships, aircraft, and cars.</p>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Primary energy supply, 2020 (latest long-run balance)</caption>
+      <thead><tr><th>Source</th><th class="num">Share</th><th>What it is used for</th></tr></thead>
+      <tbody>
+        <tr><td>Geothermal</td><td class="num">70.4%</td><td>Space heating, electricity, greenhouses, pools</td></tr>
+        <tr><td>Hydropower</td><td class="num">19.3%</td><td>Almost entirely electricity</td></tr>
+        <tr><td>Oil products</td><td class="num">10.0%</td><td>Transport and fishing vessels</td></tr>
+        <tr><td>Other (biofuel, wind)</td><td class="num">0.3%</td><td>Small and growing</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">Source: Orkustofnun (National Energy Authority), energy balance, 2020.</p>
+
+    <h2>Who uses the power</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Demand and heat</caption>
+      <thead><tr><th>Figure</th><th class="num">Value</th><th>Source, year</th></tr></thead>
+      <tbody>
+        <tr><td>Electricity per person generated</td><td class="num">48.4 MWh</td><td>Ember / Our World in Data, 2024</td></tr>
+        <tr><td>Share used by aluminium smelting</td><td class="num">~64%</td><td>Orkustofnun, 2019</td></tr>
+        <tr><td>Homes heated by geothermal</td><td class="num">~90%</td><td>Orkustofnun, 2024</td></tr>
+        <tr><td>Carbon intensity of electricity</td><td class="num">28 g CO₂/kWh</td><td>Ember, 2024</td></tr>
+        <tr><td>Renewable share, gross final energy (EU measure)</td><td class="num">79.3%</td><td>Eurostat, 2024</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">Per-person generation is the highest in the world; the world average is about 3.9 MWh.</p>
+
+    <div class="note"><b>What is coming.</b> Landsvirkjun began building Iceland's first wind farm, Vaðölduver (120 MW), in 2025, with operations expected in 2026–2027 — the first new source in a grid that has been hydro and geothermal for decades. Source: Wikipedia / Landsvirkjun, 2025.</div>
+  </div>
+</main>
+<footer class="pagefoot">
+  <div class="wrap">
+    <p><b>The Iceland Ledger.</b> A statistical portrait of Iceland, built from public figures.</p>
+    <p>Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun (National Energy Authority) · Icelandic Tourist Board · Icelandic Meteorological Office. Static files only — this site loads nothing from the network and works offline.</p>
+  </div>
+</footer>
+</body>
+</html>
