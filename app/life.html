@@ -12,7 +12,7 @@
   <div class="wrap">
     <h1>The Iceland Ledger</h1>
     <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
-    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
   </div>
 </header>
 <nav class="nav" aria-label="Sections">
@@ -24,6 +24,7 @@
       <a href="energy.html">Energy</a>
       <a href="economy.html">Economy</a>
       <a href="regions.html">Regions</a>
+      <a href="tourism.html">Visitors &amp; land</a>
       <a href="life.html" aria-current="page">Daily life</a>
     </div>
   </div>
@@ -70,6 +71,36 @@
     </table>
     </div>
     <p class="source">Source: Icelandic Meteorological Office station data, 1991–2020. June is the driest month; December the wettest of those shown. January winds average 13.7 mph, the strongest of the year.</p>
+
+    <div class="chart" id="temp-chart">
+      <h3>Eleven degrees between winter and summer</h3>
+      <p>Mean temperature by month, national average. The bars below the line are the months that average below freezing — only January, February, and December.</p>
+      <svg viewBox="0 0 960 300" role="img" aria-label="Bar chart: mean temperature in degrees Celsius. January minus 0.1, February minus 0.5, March 0.0, April 2.3, May 5.5, June 8.7, July 10.5, December minus 0.1">
+        <line x1="30" y1="230" x2="950" y2="230" stroke="#b9beb0" stroke-width="1"/>
+        <g>
+          <rect x="40" y="230" width="64" height="2" fill="#7fa8bc"/>
+          <rect x="132" y="230" width="64" height="8" fill="#7fa8bc"/>
+          <rect x="224" y="229" width="64" height="2" fill="#7fa8bc"/>
+          <rect x="316" y="193" width="64" height="37" fill="#486b38"/>
+          <rect x="408" y="142" width="64" height="88" fill="#486b38"/>
+          <rect x="500" y="91" width="64" height="139" fill="#486b38"/>
+          <rect x="592" y="62" width="64" height="168" fill="#486b38"/>
+          <rect x="684" y="230" width="64" height="2" fill="#7fa8bc"/>
+        </g>
+        <g class="bar-value" text-anchor="middle">
+          <text x="72" y="246">−0.1</text><text x="164" y="252">−0.5</text><text x="256" y="221">0.0</text>
+          <text x="348" y="185">2.3</text><text x="440" y="134">5.5</text><text x="532" y="83">8.7</text>
+          <text x="624" y="54">10.5</text><text x="716" y="246">−0.1</text>
+        </g>
+        <g class="axis" text-anchor="middle">
+          <text x="72" y="270">Jan</text><text x="164" y="270">Feb</text><text x="256" y="270">Mar</text>
+          <text x="348" y="270">Apr</text><text x="440" y="270">May</text><text x="532" y="270">Jun</text>
+          <text x="624" y="270">Jul</text><text x="716" y="270">Dec</text>
+        </g>
+        <text class="axis" x="30" y="20">Degrees Celsius, mean</text>
+      </svg>
+      <p class="chart-src">Source: Icelandic Meteorological Office, 1991–2020 averages. August to November fall between July and December and are left out of the chart; the table above gives the year's shape.</p>
+    </div>
 
     <h2>What things cost</h2>
     <div class="scrollx">

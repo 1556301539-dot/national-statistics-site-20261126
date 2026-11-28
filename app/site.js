@@ -1,6 +1,7 @@
-// Site behaviour for The Iceland Ledger. Three small jobs, nothing else:
-// the mobile menu, the region comparison table, the 2019/2024 switch.
-import { REGIONS, ECONOMY_YEARS } from "./data.js";
+// Site behaviour for The Iceland Ledger. Four small jobs, nothing else:
+// the mobile menu, the region comparison table, and the year switches
+// (economy 2019/2024, people 2015/2024, overview decade 2015/2024).
+import { REGIONS, ECONOMY_YEARS, PEOPLE_YEARS, DECADE } from "./data.js";
 
 function fmt(n) {
   return n.toLocaleString("en-US");
@@ -55,21 +56,29 @@ if (selA && selB && cmp) {
   renderCompare();
 }
 
-// Economy page: 2019 / 2024 switch.
-const seg = document.querySelector(".seg");
-if (seg) {
+// Year switches: one pattern for every page that has one. Each switch is a
+// .seg with data-switch naming its table; each data key maps to an element
+// id of "<prefix>-<key>", and the year itself to "<prefix>-year".
+const SWITCHES = {
+  economy: { data: ECONOMY_YEARS, prefix: "y", keys: ["gdp", "gdppc", "unemp", "cpi", "visitors", "note"] },
+  people: { data: PEOPLE_YEARS, prefix: "p", keys: ["pop", "under15", "over65", "fertility", "lew", "lem", "note"] },
+  decade: { data: DECADE, prefix: "d", keys: ["pop", "gdp", "gdppc", "fertility", "lew", "visitors", "elec", "note"] },
+};
+for (const seg of document.querySelectorAll(".seg[data-switch]")) {
+  const conf = SWITCHES[seg.dataset.switch];
+  if (!conf) continue;
   const buttons = seg.querySelectorAll("button");
+  const years = Object.keys(conf.data).map(Number).sort((a, b) => a - b);
   function setYear(year) {
-    const d = ECONOMY_YEARS[year];
-    document.getElementById("y-gdp").textContent = d.gdp;
-    document.getElementById("y-gdppc").textContent = d.gdppc;
-    document.getElementById("y-unemp").textContent = d.unemp;
-    document.getElementById("y-cpi").textContent = d.cpi;
-    document.getElementById("y-visitors").textContent = d.visitors;
-    document.getElementById("y-note").textContent = d.note;
-    document.getElementById("y-year").textContent = year;
+    const d = conf.data[year];
+    for (const k of conf.keys) {
+      const el = document.getElementById(conf.prefix + "-" + k);
+      if (el) el.textContent = d[k];
+    }
+    const yEl = document.getElementById(conf.prefix + "-year");
+    if (yEl) yEl.textContent = String(year);
     for (const b of buttons) b.setAttribute("aria-pressed", String(b.dataset.year === String(year)));
   }
   for (const b of buttons) b.addEventListener("click", () => setYear(Number(b.dataset.year)));
-  setYear(2024);
+  setYear(years[years.length - 1]);
 }

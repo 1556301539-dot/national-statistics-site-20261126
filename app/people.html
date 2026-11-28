@@ -12,7 +12,7 @@
   <div class="wrap">
     <h1>The Iceland Ledger</h1>
     <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
-    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
   </div>
 </header>
 <nav class="nav" aria-label="Sections">
@@ -24,6 +24,7 @@
       <a href="energy.html">Energy</a>
       <a href="economy.html">Economy</a>
       <a href="regions.html">Regions</a>
+      <a href="tourism.html">Visitors &amp; land</a>
       <a href="life.html">Daily life</a>
     </div>
   </div>
@@ -48,6 +49,28 @@
         <span class="cap">life expectancy, women</span>
         <span class="src">Destatis, 2024</span>
       </figure>
+    </div>
+
+    <div class="tool" id="then-now">
+      <span class="seg" data-switch="people" role="group" aria-label="Choose year">
+        <button type="button" data-year="2015" aria-pressed="false">2015</button>
+        <button type="button" data-year="2024" aria-pressed="true">2024</button>
+      </span>
+      <p class="small" id="p-note">Bigger, older, more international: fertility at a record low.</p>
+      <div class="scrollx">
+      <table class="ledger">
+        <caption>Then and now, <span id="p-year">2024</span></caption>
+        <tbody>
+          <tr><td>Population, 1 January</td><td class="num" id="p-pop">387,758</td></tr>
+          <tr><td>Under 15 years old</td><td class="num" id="p-under15">~18%</td></tr>
+          <tr><td>65 years and over</td><td class="num" id="p-over65">~15%</td></tr>
+          <tr><td>Fertility rate</td><td class="num" id="p-fertility">1.56</td></tr>
+          <tr><td>Life expectancy, women</td><td class="num" id="p-lew">84.5 yrs</td></tr>
+          <tr><td>Life expectancy, men</td><td class="num" id="p-lem">81.1 yrs</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="source">Sources: Statistics Iceland (population, fertility, life expectancy 2015), UN World Population Prospects 2024 (age shares 2015), Destatis (life expectancy 2024).</p>
     </div>
 
     <div class="chart">
@@ -98,6 +121,32 @@
     </table>
     </div>
     <p class="source">Age shares are rounded whole percents. Fertility is children per woman.</p>
+
+    <div class="chart" id="age-chart">
+      <h3>The island is ageing — slowly</h3>
+      <p>Share of the population by age band, 2015 against 2024. Children shrank by two points; the 65-and-over band grew by one.</p>
+      <svg viewBox="0 0 960 280" role="img" aria-label="Grouped bar chart: share of population under 15 was 20.2 percent in 2015 and about 18 percent in 2024; 15 to 64 was 66.1 and about 66; 65 and over was 13.7 and about 15">
+        <rect x="170" y="8" width="14" height="14" fill="#486b38"/><text class="legend" x="190" y="19">2015</text>
+        <rect x="250" y="8" width="14" height="14" fill="#7fa8bc"/><text class="legend" x="270" y="19">2024</text>
+        <g class="bar-label">
+          <text x="10" y="58">0–14 years</text><text x="10" y="148">15–64 years</text><text x="10" y="238">65 years and over</text>
+        </g>
+        <g>
+          <rect x="170" y="30" width="162" height="22" fill="#486b38"/>
+          <rect x="170" y="64" width="144" height="22" fill="#7fa8bc"/>
+          <rect x="170" y="120" width="529" height="22" fill="#486b38"/>
+          <rect x="170" y="154" width="528" height="22" fill="#7fa8bc"/>
+          <rect x="170" y="210" width="110" height="22" fill="#486b38"/>
+          <rect x="170" y="244" width="120" height="22" fill="#7fa8bc"/>
+        </g>
+        <g class="bar-value">
+          <text x="340" y="46">20.2%</text><text x="322" y="80">~18%</text>
+          <text x="707" y="136">66.1%</text><text x="706" y="170">~66%</text>
+          <text x="288" y="226">13.7%</text><text x="298" y="260">~15%</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: UN World Population Prospects 2024 (2015); Statistics Iceland (2024, rounded).</p>
+    </div>
 
     <h2>Where people live</h2>
     <div class="scrollx">

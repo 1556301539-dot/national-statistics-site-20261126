@@ -6,25 +6,31 @@
 
 A national statistics site for Iceland: every figure that runs a volcanic
 island — people, energy, fish, visitors, weather — counted, sourced, and
-dated. Six pages, about 110 verified figures, each with its source and year.
+dated. Seven pages, about 135 verified figures, each with its source and year.
 
 ## What it is
 
 - `index.html` — the country at a glance, a decade of population growth,
-  and the contents of the ledger.
-- `people.html` — who lives here: ages, life expectancy, towns.
-- `energy.html` — the 99.98% renewable grid, by source and by use.
-- `economy.html` — fish, aluminium, visitors; a 2019 / 2024 switch.
-- `regions.html` — the eight regions, bar by bar, with a tool to compare
-  any two side by side.
+  GDP 2015–2024, and a 2015 / 2024 switch for the whole decade.
+- `people.html` — who lives here: ages, life expectancy, towns; a 2015 /
+  2024 switch and an age-structure chart.
+- `energy.html` — the 99.98% renewable grid, by source and by use; installed
+  capacity by source.
+- `economy.html` — fish, aluminium, visitors; a 2019 / 2024 switch and the
+  catch by species.
+- `regions.html` — the eight regions, bar by bar, land against people, with
+  a tool to compare any two side by side.
+- `tourism.html` — who comes, what they spend, and the glaciers they come
+  to see — shrinking every year.
 - `life.html` — weather by month, daylight, prices, and country facts.
 
 ## Design
 
 "Basalt & Moss": pale moss-grey paper, basalt ink, one ember accent spent
 on the hero figure. Georgia display type, system sans body. Ledger tables
-with ruled rows and right-aligned numerals. No network loads — every file
-the site needs sits under `app/`, and it works offline.
+with ruled rows and right-aligned numerals. Hand-built inline SVG charts —
+no libraries. No network loads — every file the site needs sits under
+`app/`, and it works offline.
 
 ## Run it
 
@@ -41,4 +47,5 @@ node serve.ts
 
 Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun (National
 Energy Authority) · Icelandic Tourist Board · Icelandic Meteorological
-Office. Every figure on the site names its source and year.
+Office · UN World Population Prospects. Every figure on the site names its
+source and year.

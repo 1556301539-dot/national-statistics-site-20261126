@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visitors &amp; the land — The Iceland Ledger</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="site.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <h1>The Iceland Ledger</h1>
+    <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
+  </div>
+</header>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <button class="menubtn" aria-expanded="false">Sections</button>
+    <div class="links">
+      <a href="index.html">Overview</a>
+      <a href="people.html">People</a>
+      <a href="energy.html">Energy</a>
+      <a href="economy.html">Economy</a>
+      <a href="regions.html">Regions</a>
+      <a href="tourism.html" aria-current="page">Visitors &amp; land</a>
+      <a href="life.html">Daily life</a>
+    </div>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <p class="lede">Two numbers define modern Iceland: 2.26 million visitors a year against 387,758 residents — nearly six guests for every Icelander — and 10,400 km² of glacier that is shrinking every year. This page counts both: who comes, what they spend, and what the land they come to see is doing.</p>
+
+    <div class="hero">
+      <figure>
+        <span class="num">2,261,391</span>
+        <span class="cap">foreign visitors in 2024</span>
+        <span class="src">Icelandic Tourist Board, 2024</span>
+      </figure>
+      <figure>
+        <span class="num">9.6 m</span>
+        <span class="cap">registered overnight stays</span>
+        <span class="src">Statistics Iceland, 2024</span>
+      </figure>
+      <figure>
+        <span class="num">8.1%</span>
+        <span class="cap">of GDP is tourism</span>
+        <span class="src">Statistics Iceland, 2024</span>
+      </figure>
+    </div>
+
+    <div class="chart">
+      <h3>Where the visitors come from, 2024</h3>
+      <p>Departures via Keflavík Airport, by nationality. Americans alone outnumber the next two markets combined.</p>
+      <svg viewBox="0 0 960 330" role="img" aria-label="Horizontal bar chart: visitors to Iceland in 2024 by nationality. United States 620,396; United Kingdom 266,246; Germany 141,879; Poland about 108,400; Italy about 98,800; China about 96,200; France about 95,600; Canada about 77,800">
+        <g class="bar-label">
+          <text x="10" y="50">United States</text><text x="10" y="86">United Kingdom</text>
+          <text x="10" y="122">Germany</text><text x="10" y="158">Poland</text>
+          <text x="10" y="194">Italy</text><text x="10" y="230">China</text>
+          <text x="10" y="266">France</text><text x="10" y="302">Canada</text>
+        </g>
+        <g fill="#486b38">
+          <rect x="170" y="34" width="560" height="22"/><rect x="170" y="70" width="240" height="22"/>
+          <rect x="170" y="106" width="128" height="22"/><rect x="170" y="142" width="98" height="22"/>
+          <rect x="170" y="178" width="89" height="22"/><rect x="170" y="214" width="87" height="22"/>
+          <rect x="170" y="250" width="86" height="22"/><rect x="170" y="286" width="70" height="22"/>
+        </g>
+        <g class="bar-value">
+          <text x="738" y="50">620,396</text><text x="418" y="86">266,246</text>
+          <text x="306" y="122">141,879</text><text x="276" y="158">~108,400</text>
+          <text x="267" y="194">~98,800</text><text x="265" y="230">~96,200</text>
+          <text x="264" y="266">~95,600</text><text x="248" y="302">~77,800</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: Icelandic Tourist Board, departures via Keflavík Airport by nationality, 2024. Figures marked ~ are rounded from the Board's 2025 release, which gives each market's change on 2024. The top eight markets are 72% of all visitors.</p>
+    </div>
+
+    <h2>Who comes, then and now</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Keflavík departures by nationality, 2015 vs 2024</caption>
+      <thead><tr><th>Market</th><th class="num">2015</th><th class="num">2024</th><th class="num">Change</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td class="num">242,805</td><td class="num">620,396</td><td class="num">+156%</td></tr>
+        <tr><td>United Kingdom</td><td class="num">241,024</td><td class="num">266,246</td><td class="num">+10%</td></tr>
+        <tr><td>Germany</td><td class="num">103,384</td><td class="num">141,879</td><td class="num">+37%</td></tr>
+        <tr class="total"><td>All foreign visitors</td><td class="num">1,289,140</td><td class="num">2,261,391</td><td class="num">+75%</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">Source: Icelandic Tourist Board, 2015 and 2024. In 2015 the UK and the USA were level; by 2024 Americans were 27% of all visitors and the British 12%. Totals count all points of entry; market rows count Keflavík departures.</p>
+
+    <div class="chart">
+      <h3>The ice is leaving</h3>
+      <p>Glacier area in km². Iceland's ice has lost about 2,200 km² since the 1890s — an area the size of Luxembourg twice over.</p>
+      <svg viewBox="0 0 960 230" role="img" aria-label="Horizontal bar chart: all Iceland glaciers about 12,600 square kilometres in the 1890s and 10,400 in 2019; Vatnajokull 8,326 at its maximum around 1945 and 7,720 in 2019">
+        <g class="bar-label">
+          <text x="10" y="56">All glaciers, 1890s</text><text x="10" y="106">All glaciers, 2019</text>
+          <text x="10" y="156">Vatnajökull, c. 1945</text><text x="10" y="206">Vatnajökull, 2019</text>
+        </g>
+        <g>
+          <rect x="170" y="40" width="560" height="26" fill="#486b38"/>
+          <rect x="170" y="90" width="462" height="26" fill="#7fa8bc"/>
+          <rect x="170" y="140" width="370" height="26" fill="#486b38"/>
+          <rect x="170" y="190" width="343" height="26" fill="#7fa8bc"/>
+        </g>
+        <g class="bar-value">
+          <text x="738" y="58">~12,600</text><text x="640" y="108">10,400</text>
+          <text x="548" y="158">8,326</text><text x="521" y="208">7,720</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: Icelandic glacier inventory, 2019; Vatnajökull maximum c. 1945. Okjökull, once a glacier, lost 99% of its area and was declared dead in 2014.</p>
+    </div>
+
+    <h2>The land in figures</h2>
+    <div class="scrollx">
+    <table class="ledger">
+      <caption>Visitors, ice, and air — what the guests meet</caption>
+      <thead><tr><th>Figure</th><th class="num">Value</th><th>Source, year</th></tr></thead>
+      <tbody>
+        <tr><td>Glaciers' share of Iceland</td><td class="num">10.1%</td><td>Icelandic glacier inventory, 2019</td></tr>
+        <tr><td>Ice lost since the 1890s</td><td class="num">~2,200 km²</td><td>Icelandic glacier inventory, 2019</td></tr>
+        <tr><td>Vatnajökull National Park</td><td class="num">14,141 km²</td><td>Government of Iceland, 2008</td></tr>
+        <tr><td>National parks</td><td class="num">3</td><td>Government of Iceland</td></tr>
+        <tr><td>CO₂ per person</td><td class="num">8.5 t</td><td>World Bank, 2024</td></tr>
+        <tr><td>Cruise passengers, Reykjavík</td><td class="num">322,000</td><td>Port of Reykjavík, 2024</td></tr>
+        <tr><td>Ferry visitors, Seyðisfjörður</td><td class="num">18,500</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Tourism export earnings</td><td class="num">ISK 620 bn</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Visitor spending</td><td class="num">ISK 540 bn</td><td>Icelandic Tourist Board, 2024</td></tr>
+        <tr><td>Visitors per resident</td><td class="num">5.8</td><td>Computed, 2024</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="source">Vatnajökull National Park, about 14% of the country, became a UNESCO World Heritage Site in 2019. CO₂ is tonnes of CO₂-equivalent per person, excluding land use. The 8.5 t figure is above the world average of 4.7 t — aluminium smelting and long-distance travel weigh on a small population.</p>
+
+    <div class="note"><b>Six guests per Icelander.</b> 2.26 million visitors against 387,758 residents is the highest visitor-to-resident ratio in Europe. Nine in ten visitors arrive through Keflavík, and most never leave the south-west — which is why the pressure is felt in one corner of the island while the rest stays empty.</div>
+  </div>
+</main>
+<footer class="pagefoot">
+  <div class="wrap">
+    <p><b>The Iceland Ledger.</b> A statistical portrait of Iceland, built from public figures.</p>
+    <p>Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun (National Energy Authority) · Icelandic Tourist Board · Icelandic Meteorological Office. Static files only — this site loads nothing from the network and works offline.</p>
+  </div>
+</footer>
+</body>
+</html>

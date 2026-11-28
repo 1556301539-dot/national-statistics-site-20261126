@@ -12,7 +12,7 @@
   <div class="wrap">
     <h1>The Iceland Ledger</h1>
     <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
-    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
   </div>
 </header>
 <nav class="nav" aria-label="Sections">
@@ -24,6 +24,7 @@
       <a href="energy.html" aria-current="page">Energy</a>
       <a href="economy.html">Economy</a>
       <a href="regions.html">Regions</a>
+      <a href="tourism.html">Visitors &amp; land</a>
       <a href="life.html">Daily life</a>
     </div>
   </div>
@@ -86,6 +87,28 @@
     </table>
     </div>
     <p class="source">Source: Eurostat, 2024.</p>
+
+    <div class="chart" id="capacity-chart">
+      <h3>What is built to make it: installed capacity</h3>
+      <p>Capacity in megawatts, 2021. Capacity is not generation — hydro runs about 70% of the hours in a year, geothermal more, wind less.</p>
+      <svg viewBox="0 0 960 260" role="img" aria-label="Horizontal bar chart: installed electricity capacity in 2021. Hydropower 2,215 megawatts; geothermal 799; fuel 77; wind 2">
+        <g class="bar-label">
+          <text x="10" y="60">Hydropower</text><text x="10" y="115">Geothermal</text>
+          <text x="10" y="170">Fuel (oil, diesel)</text><text x="10" y="225">Wind</text>
+        </g>
+        <g>
+          <rect x="170" y="40" width="560" height="30" fill="#486b38"/>
+          <rect x="170" y="95" width="202" height="30" fill="#c75b2b"/>
+          <rect x="170" y="150" width="19" height="30" fill="#b9beb0"/>
+          <rect x="170" y="205" width="3" height="30" fill="#7fa8bc"/>
+        </g>
+        <g class="bar-value">
+          <text x="738" y="60">2,215 MW</text><text x="380" y="115">799 MW</text>
+          <text x="197" y="170">77 MW</text><text x="181" y="225">2 MW</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: Orkustofnun, Energy Statistics in Iceland 2021 (installed capacity, 2021). Total 3,093 MW. Wind is the next chapter: the first wind farm, Vaðölduver (120 MW), is under construction for 2026–2027.</p>
+    </div>
 
     <h2>All energy, not just electricity</h2>
     <p>Electricity is the clean part. Counting heat and transport too, geothermal still dominates — it is the largest single energy source in the country — but oil keeps a tenth of the total, almost all of it in ships, aircraft, and cars.</p>

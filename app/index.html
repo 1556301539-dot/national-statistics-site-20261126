@@ -12,7 +12,7 @@
   <div class="wrap">
     <h1>The Iceland Ledger</h1>
     <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
-    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
   </div>
 </header>
 <nav class="nav" aria-label="Sections">
@@ -24,6 +24,7 @@
       <a href="energy.html">Energy</a>
       <a href="economy.html">Economy</a>
       <a href="regions.html">Regions</a>
+      <a href="tourism.html">Visitors &amp; land</a>
       <a href="life.html">Daily life</a>
     </div>
   </div>
@@ -48,6 +49,29 @@
         <span class="cap">foreign visitors in 2024</span>
         <span class="src">Icelandic Tourist Board, 2024</span>
       </figure>
+    </div>
+
+    <div class="tool">
+      <span class="seg" data-switch="decade" role="group" aria-label="Choose year">
+        <button type="button" data-year="2015" aria-pressed="false">2015</button>
+        <button type="button" data-year="2024" aria-pressed="true">2024</button>
+      </span>
+      <p class="small" id="d-note">Nearly twice the economy, nearly twice the visitors — on 59,000 more people.</p>
+      <div class="scrollx">
+      <table class="ledger">
+        <caption>The decade in two columns, <span id="d-year">2024</span></caption>
+        <tbody>
+          <tr><td>Population, 1 January</td><td class="num" id="d-pop">387,758</td></tr>
+          <tr><td>Gross domestic product</td><td class="num" id="d-gdp">$33.3 bn</td></tr>
+          <tr><td>GDP per person</td><td class="num" id="d-gdppc">$86,664</td></tr>
+          <tr><td>Fertility rate</td><td class="num" id="d-fertility">1.56</td></tr>
+          <tr><td>Life expectancy, women</td><td class="num" id="d-lew">84.5 yrs</td></tr>
+          <tr><td>Foreign visitors</td><td class="num" id="d-visitors">2,261,391</td></tr>
+          <tr><td>Electricity generated</td><td class="num" id="d-elec">19,606 GWh</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="source">Sources: Statistics Iceland (population, fertility, life expectancy), IMF World Economic Outlook (GDP), Icelandic Tourist Board (visitors), Orkustofnun (electricity).</p>
     </div>
 
     <h2>The country at a glance</h2>
@@ -105,15 +129,45 @@
       <p class="chart-src">Source: Statistics Iceland, population at 1 January, 2015–2024 (rounded to the nearest 100). Bars start at 300,000 people.</p>
     </div>
 
+    <div class="chart">
+      <h3>Money: the economy nearly doubled</h3>
+      <p>Gross domestic product in current US dollars, 2015–2024. The dip in 2020 is the pandemic; the climb after it is tourism coming back and prices rising.</p>
+      <svg viewBox="0 0 960 300" role="img" aria-label="Bar chart: Iceland GDP in billions of dollars, 2015 17.4, 2016 20.6, 2017 24.5, 2018 25.9, 2019 24.5, 2020 21.7, 2021 25.6, 2022 29.2, 2023 31.7, 2024 33.3">
+        <line x1="30" y1="250" x2="950" y2="250" stroke="#b9beb0" stroke-width="1"/>
+        <g fill="#486b38">
+          <rect x="40" y="149" width="64" height="101"/><rect x="132" y="131" width="64" height="119"/>
+          <rect x="224" y="108" width="64" height="142"/><rect x="316" y="100" width="64" height="150"/>
+          <rect x="408" y="108" width="64" height="142"/><rect x="500" y="124" width="64" height="126"/>
+          <rect x="592" y="102" width="64" height="148"/><rect x="684" y="81" width="64" height="169"/>
+          <rect x="776" y="66" width="64" height="184"/><rect x="868" y="57" width="64" height="193" fill="#c75b2b"/>
+        </g>
+        <g class="bar-value" text-anchor="middle">
+          <text x="72" y="139">17.4</text><text x="164" y="121">20.6</text><text x="256" y="98">24.5</text>
+          <text x="348" y="90">25.9</text><text x="440" y="98">24.5</text><text x="532" y="114">21.7</text>
+          <text x="624" y="92">25.6</text><text x="716" y="71">29.2</text><text x="808" y="56">31.7</text>
+          <text x="900" y="47">33.3</text>
+        </g>
+        <g class="axis" text-anchor="middle">
+          <text x="72" y="270">2015</text><text x="164" y="270">2016</text><text x="256" y="270">2017</text>
+          <text x="348" y="270">2018</text><text x="440" y="270">2019</text><text x="532" y="270">2020</text>
+          <text x="624" y="270">2021</text><text x="716" y="270">2022</text><text x="808" y="270">2023</text>
+          <text x="900" y="270">2024</text>
+        </g>
+        <text class="axis" x="30" y="20">Billion US dollars, current prices</text>
+      </svg>
+      <p class="chart-src">Source: IMF World Economic Outlook, 2015–2024. Real GDP growth in 2024 was −1.0% — the current-dollar rise is the króna and prices, not more output.</p>
+    </div>
+
     <h2>What is in this ledger</h2>
     <div class="scrollx">
     <table class="ledger">
       <thead><tr><th>Section</th><th>What it answers</th></tr></thead>
       <tbody>
-        <tr><td><a href="people.html">People</a></td><td>Who lives here, how long they live, where they cluster — towns, ages, origins.</td></tr>
+        <tr><td><a href="people.html">People</a></td><td>Who lives here, how long they live, where they cluster — towns, ages, origins. With a 2015 / 2024 switch.</td></tr>
         <tr><td><a href="energy.html">Energy</a></td><td>How a volcanic island makes 99.98% renewable electricity and heats nine in ten homes from the ground.</td></tr>
         <tr><td><a href="economy.html">Economy</a></td><td>What the country sells — fish, aluminium, visitors — and what it costs to live here. With a 2019 / 2024 switch.</td></tr>
         <tr><td><a href="regions.html">Regions</a></td><td>The eight regions, bar by bar, with a tool to compare any two side by side.</td></tr>
+        <tr><td><a href="tourism.html">Visitors &amp; land</a></td><td>Who comes, what they spend, and the glaciers they come to see — shrinking every year.</td></tr>
         <tr><td><a href="life.html">Daily life</a></td><td>Weather by month, daylight, prices, and the facts that frame a year in Iceland.</td></tr>
       </tbody>
     </table>

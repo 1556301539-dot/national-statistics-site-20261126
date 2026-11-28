@@ -12,7 +12,7 @@
   <div class="wrap">
     <h1>The Iceland Ledger</h1>
     <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
-    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
   </div>
 </header>
 <nav class="nav" aria-label="Sections">
@@ -24,6 +24,7 @@
       <a href="energy.html">Energy</a>
       <a href="economy.html">Economy</a>
       <a href="regions.html" aria-current="page">Regions</a>
+      <a href="tourism.html">Visitors &amp; land</a>
       <a href="life.html">Daily life</a>
     </div>
   </div>
@@ -45,6 +46,42 @@
       <div class="regionbar"><span>Northwestern Region</span><span class="track"><span class="fill" style="display:block;width:3.0%"></span></span><span class="val">7,294</span></div>
       <div class="regionbar"><span>Westfjords</span><span class="track"><span class="fill" style="display:block;width:2.9%"></span></span><span class="val">7,168</span></div>
       <p class="chart-src">Source: Statistics Iceland, population by region, 1 January 2024. Total 383,726 (regional estimates).</p>
+    </div>
+
+    <div class="chart" id="land-people-chart">
+      <h3>Land against people</h3>
+      <p>Each region's share of Iceland's land against its share of Iceland's people. The Capital Region is 1% of the land and 64% of the people; the Southern Region is 30% of the land and 9% of the people.</p>
+      <svg viewBox="0 0 960 400" role="img" aria-label="Paired bar chart: each region's share of Iceland's land and people. Capital Region 1.0 percent of land, 63.6 of people; Southern Region 30.0 of land, 8.9 of people; Northeastern 21.4 of land, 8.2 of people; Eastern 16.0 of land, 2.9 of people">
+        <rect x="170" y="8" width="14" height="14" fill="#7fa8bc"/><text class="legend" x="190" y="19">Share of Iceland's land</text>
+        <rect x="380" y="8" width="14" height="14" fill="#486b38"/><text class="legend" x="400" y="19">Share of Iceland's people</text>
+        <g class="bar-label">
+          <text x="10" y="58">Capital Region</text><text x="10" y="102">Southern Peninsula</text>
+          <text x="10" y="146">Western Region</text><text x="10" y="190">Westfjords</text>
+          <text x="10" y="234">Northwestern Region</text><text x="10" y="278">Northeastern Region</text>
+          <text x="10" y="322">Eastern Region</text><text x="10" y="366">Southern Region</text>
+        </g>
+        <g>
+          <rect x="170" y="36" width="9" height="16" fill="#7fa8bc"/><rect x="170" y="56" width="560" height="16" fill="#486b38"/>
+          <rect x="170" y="80" width="7" height="16" fill="#7fa8bc"/><rect x="170" y="100" width="71" height="16" fill="#486b38"/>
+          <rect x="170" y="124" width="82" height="16" fill="#7fa8bc"/><rect x="170" y="144" width="40" height="16" fill="#486b38"/>
+          <rect x="170" y="168" width="81" height="16" fill="#7fa8bc"/><rect x="170" y="188" width="17" height="16" fill="#486b38"/>
+          <rect x="170" y="212" width="109" height="16" fill="#7fa8bc"/><rect x="170" y="232" width="17" height="16" fill="#486b38"/>
+          <rect x="170" y="256" width="188" height="16" fill="#7fa8bc"/><rect x="170" y="276" width="72" height="16" fill="#486b38"/>
+          <rect x="170" y="300" width="141" height="16" fill="#7fa8bc"/><rect x="170" y="320" width="26" height="16" fill="#486b38"/>
+          <rect x="170" y="344" width="264" height="16" fill="#7fa8bc"/><rect x="170" y="364" width="78" height="16" fill="#486b38"/>
+        </g>
+        <g class="bar-value">
+          <text x="185" y="48">1.0%</text><text x="736" y="68">63.6%</text>
+          <text x="183" y="92">0.8%</text><text x="247" y="112">8.1%</text>
+          <text x="258" y="136">9.3%</text><text x="216" y="156">4.5%</text>
+          <text x="257" y="180">9.2%</text><text x="193" y="200">1.9%</text>
+          <text x="285" y="224">12.4%</text><text x="193" y="244">1.9%</text>
+          <text x="364" y="268">21.4%</text><text x="248" y="288">8.2%</text>
+          <text x="317" y="312">16.0%</text><text x="202" y="332">2.9%</text>
+          <text x="440" y="356">30.0%</text><text x="254" y="376">8.9%</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: Statistics Iceland, population and area by region, 1 January 2024. Shares computed from those figures; people shares use the regional total of 383,726.</p>
     </div>
 
     <h2>Compare any two regions</h2>

@@ -12,7 +12,7 @@
   <div class="wrap">
     <h1>The Iceland Ledger</h1>
     <p class="tagline">Every figure that runs a volcanic island — people, energy, fish, visitors, weather — counted, sourced, and dated.</p>
-    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 27 November 2026.</p>
+    <p class="dateline"><b>Figures to 2024.</b> Sources: Statistics Iceland · World Bank · IMF · Eurostat · Orkustofnun · Icelandic Tourist Board · Icelandic Met Office. Updated 28 November 2026.</p>
   </div>
 </header>
 <nav class="nav" aria-label="Sections">
@@ -24,6 +24,7 @@
       <a href="energy.html">Energy</a>
       <a href="economy.html" aria-current="page">Economy</a>
       <a href="regions.html">Regions</a>
+      <a href="tourism.html">Visitors &amp; land</a>
       <a href="life.html">Daily life</a>
     </div>
   </div>
@@ -33,7 +34,7 @@
     <p class="lede">Three things pay for Iceland: fish, aluminium, and visitors. In 2024 the economy shrank a little, prices ran hot, and yet visitors came back past their pre-pandemic level and spent more than ever. Use the switch below to compare 2024 with 2019, the last full year before the pandemic.</p>
 
     <div class="tool">
-      <span class="seg" role="group" aria-label="Choose year">
+      <span class="seg" data-switch="economy" role="group" aria-label="Choose year">
         <button type="button" data-year="2019" aria-pressed="false">2019</button>
         <button type="button" data-year="2024" aria-pressed="true">2024</button>
       </span>
@@ -110,6 +111,28 @@
     </div>
     <p class="source">The catch fell 28% on 2023 because no capelin were caught at all; the cod quota for 2026/27 is set at 201,674 tonnes.</p>
 
+    <div class="chart" id="catch-chart">
+      <h3>What the boats brought in, 2024</h3>
+      <p>Catch by group, in tonnes. Pelagic fish — mostly mackerel, herring, and blue whiting — outweigh the bottom fish; cod and haddock are the two big demersal species inside the demersal bar.</p>
+      <svg viewBox="0 0 960 260" role="img" aria-label="Horizontal bar chart: catch in tonnes in 2024. Pelagic fish 546,659; demersal fish 423,165; cod 223,862; haddock 84,360">
+        <g class="bar-label">
+          <text x="10" y="60">Pelagic fish</text><text x="10" y="115">Demersal fish</text>
+          <text x="10" y="170">Cod</text><text x="10" y="225">Haddock</text>
+        </g>
+        <g>
+          <rect x="170" y="40" width="560" height="30" fill="#486b38"/>
+          <rect x="170" y="95" width="433" height="30" fill="#7fa8bc"/>
+          <rect x="170" y="150" width="229" height="30" fill="#486b38"/>
+          <rect x="170" y="205" width="86" height="30" fill="#7fa8bc"/>
+        </g>
+        <g class="bar-value">
+          <text x="738" y="60">546,659 t</text><text x="611" y="115">423,165 t</text>
+          <text x="407" y="170">223,862 t</text><text x="264" y="225">84,360 t</text>
+        </g>
+      </svg>
+      <p class="chart-src">Source: Statistics Iceland, catch by species group, 2024. Capelin, usually the largest single pelagic catch, was zero in 2024 — the whole fall on 2023 is capelin.</p>
+    </div>
+
     <div class="chart">
       <h3>Visitors: the boom, the cliff, the return</h3>
       <svg viewBox="0 0 720 260" role="img" aria-label="Bar chart: foreign visitors in millions, 2019 1.99, 2020 0.48, 2021 0.69, 2022 1.70, 2023 2.21, 2024 2.26">
@@ -150,7 +173,7 @@
       </tbody>
     </table>
     </div>
-    <p class="source">Visitor spending is about $4.2 billion at the 2024 exchange rate.</p>
+    <p class="source">Visitor spending is about $4.2 billion at the 2024 exchange rate. The full visitor story — where they come from, and the land they come to see — is on the <a href="tourism.html">Visitors &amp; land</a> page.</p>
   </div>
 </main>
 <footer class="pagefoot">
